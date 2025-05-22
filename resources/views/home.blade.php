@@ -1,0 +1,50 @@
+@extends('layouts.app')
+
+@section('content')
+    <div class="container-fluid border border-secondary">
+        DOPE
+        <br>
+        DOCTYPE
+        <br>
+         DOPE
+        <br>
+        DOCTYPE
+        <br>
+         DOPE
+        <br>
+        DOCTYPE
+        <br>
+         DOPE
+        <br>
+        DOCTYPE
+        <br>
+         DOPE
+        <br>
+        DOCTYPE
+        <br>
+         DOPE
+        <br>
+        DOCTYPE
+        <br>
+         DOPE
+        <br>
+        DOCTYPE
+        <br>
+         DOPE
+        <br>
+        DOCTYPE
+        <br>
+         DOPE
+        <br>
+        DOCTYPE
+        <br>
+         DOPE
+        <br>
+        DOCTYPE
+        <br>
+         DOPE
+        <br>
+        DOCTYPE
+        <br>
+    </div>
+@endsection

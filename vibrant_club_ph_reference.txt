@@ -1,0 +1,48 @@
+VIBRANT CLUB PH REFERENCE
+
+-----------------------------------------------------------------------------
+
+PROJECT INITIALIZATION:
+open vs code 
+cd desktop/project_vibrant_club_ph
+composer create-project laravel/laravel:^11.0 vibrant_club_ph
+cd vibrant_club_ph
+php artisan --version
+
+CRUCIAL (change .env file): https://chatgpt.com/c/682d32d8-99b4-800e-88b5-041abb9a149d
+change .env file
+php artisan migrate 
+
+composer require laravel/ui
+php artisan ui bootstrap --auth
+npm install
+npm run dev
+
+-----------------------------------------------------------------------------
+
+RESET PASSWORD EMAIL NOTIFICATION
+CHAT GPT REFERENCE: https://chatgpt.com/c/682d6559-ce28-800e-ad71-e5df2bcb1327
+https://myaccount.google.com/apppasswords?continue=https://myaccount.google.com/security?gar%3DWzEyMF0%26rapt%3DAEjHL4Oep2u3udvt8LeqAsV9aF2vw-cEkPZ_upaGSS4eyw8-up_hAIjX2NmlJVFSUgKYgNb-kqEj_-b3OuK0ryjzfwxgIwI9YEPaT469e4wnFXoqzv1gcbc&pli=1&rapt=AEjHL4PgH1fopsmSoYI3o0mtEV81vFeAoAEhnI_drHrmgFmCn4liUpvWB0f83cBETNb7OQmb0YMgHaLvSVqsRvnuiCky08on5waT5VsnRfhrwg_ziSrGKrw
+
+-----------------------------------------------------------------------------
+
+HIDING NAV TO GUEST
+CHANGE NAME TO LASTNAME, FIRSTNAME, MIDDLENAME 
+ADDING REGISTRATION_CODE_TBL
+ADDING COLUMN REGISTRATION_CODE TO USER
+
+CHAT GPT REFERENCE:
+https://chatgpt.com/c/682d6e13-cc48-800e-869b-75560042bf4f
+https://chatgpt.com/c/682d6f88-1f48-800e-a888-9c4767cd7acb
+
+
+RUN SEEDER:
+php artisan db:seed --class=RegistrationCodeSeeder
+
+-----------------------------------------------------------------------------
+
+AESTHETIC REISTER
+https://chatgpt.com/c/682d7a50-9984-800e-a773-2427c26271b6
+
+
+
