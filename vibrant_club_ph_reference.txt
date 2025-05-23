@@ -240,4 +240,7 @@ nano .env
 APP_URL=https://vibrant-club.com
 
 ----------------------------------------------------------------------------
+GIT MERGE PROBLEMS:
+https://chatgpt.com/c/682fff5e-5f80-800e-a27a-4f18842750cd
+
 
