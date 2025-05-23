@@ -204,14 +204,6 @@ CREDENTIALS
 ssh root@157.230.252.114
 !Digitalocean@032023x
 cd /var/www/vibrant_club_ph
-
-
-git add package.json package-lock.json
-git commit -m "Saving my changes"
-git pull origin master
-
-
-
 git pull origin master
 php artisan config:cache
 php artisan route:cache
