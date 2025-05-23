@@ -196,6 +196,7 @@ npm run build
 npm run dev
 
 ----------------------------------------------------------------------------
+
 UPDATING PROJECT IN PROD (1ST TIME)
 https://chatgpt.com/c/682fcae1-153c-800e-ab24-2702f379253f
 
@@ -237,3 +238,6 @@ sudo certbot install --cert-name vibrant-club.com
 
 nano .env
 APP_URL=https://vibrant-club.com
+
+----------------------------------------------------------------------------
+

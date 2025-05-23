@@ -49,31 +49,40 @@
         <h2 class="section-title text-center mb-4">📢 Announcements</h2>
         <div class="row mb-4">
             <div class="col-md-12">
-                <div class="card announcement-card shadow-sm p-3">
-                    <h5>✨ Get FREE Access to Vibrant Club PH – Starting June 15!</h5>
-                    <p>To celebrate the growth of Vibrant Club PH, we’re opening our doors to 50 Filipino influencers for exclusive FREE access to our platform!.</p>
+                <div class="card announcement-card shadow-sm p-4">
+                    <h5 class="mb-3">✨ Get FREE Access to Vibrant Club PH – Starting June 15!</h5>
+                    <p>
+                        We’re excited to celebrate a major milestone — the growth of <strong>Vibrant Club PH</strong>
+                        has been incredible, thanks to the amazing energy of the Filipino influencer community. As a
+                        heartfelt <em>thank you</em>, we’re opening our doors in a big way.
+                    </p>
+                    <p>
+                        Starting <strong>June 15</strong>, we’re offering <strong>FREE exclusive access</strong> to the
+                        first <strong>100 Filipino influencers</strong>. This is your opportunity to be part of
+                        something exciting — and it all starts by joining our waitlist.
+                    </p>
+                    <p>
+                        Please note that this is a waitlist. Signing up does not guarantee access. Selected influencers
+                        will be notified via email with the next steps.
+                    </p>
+                    <p>
+                        Be part of a vibrant space built for creators — where collaboration is encouraged, creativity
+                        shines, and your influence can grow like never before.
+                    </p>
+                    <p>
+                        🌟 Don’t miss your chance to help shape the future of influencer culture in the Philippines.
+                    </p>
+                    <p>
+                        <strong>Sign up. Watch your inbox. Shine with Vibrant Club PH.</strong>
+                    </p>
+                    <p class="mb-0">
+                        👉 <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSegNX6ly7_34fGNcgb5upPZAPwaMxzd79ZBoagr9poGd7FfVQ/viewform?usp=dialog"
+                            target="_blank"><strong>Click here to join the waitlist</strong></a>
+                    </p>
                 </div>
             </div>
         </div>
-
-        <div class="row mb-4">
-            <div class="col-md-12">
-                <div class="card announcement-card shadow-sm p-3">
-                    <h5>✨ Upcoming Influencer Bootcamp – June 2025</h5>
-                    <p>Don't miss our exclusive bootcamp packed with training, networking, and branding strategies.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mb-4">
-            <div class="col-md-12">
-                <div class="card announcement-card shadow-sm p-3">
-                    <h5>✨ Upcoming Influencer Bootcamp – June 2025</h5>
-                    <p>Don't miss our exclusive bootcamp packed with training, networking, and branding strategies.</p>
-                </div>
-            </div>
-        </div>
-        
 
         <h2 class="section-title text-center mb-4">📸 Featured Creators</h2>
         <div class="row text-center">
@@ -92,16 +101,7 @@
                 <h5 class="fw-bold">@foodiefrenzy</h5>
                 <p>Travel & Food Blogger</p>
             </div>
-            <div class="col-md-4 border">
-                <img src="{{ asset('images/logo3.png') }}" class="rounded-circle img-fluid mb-2">
-                <h5 class="fw-bold">@foodiefrenzy</h5>
-                <p>Travel & Food Blogger</p>
-            </div>
-            <div class="col-md-4 border">
-                <img src="{{ asset('images/logo3.png') }}" class="rounded-circle img-fluid mb-2">
-                <h5 class="fw-bold">@foodiefrenzy</h5>
-                <p>Travel & Food Blogger</p>
-            </div>
+        
         </div>
 
         <div class="text-center mt-5">
