@@ -42,7 +42,7 @@
         <h1 class="display-5 fw-bold">Welcome to Vibrant Club PH</h1>
         <p class="lead">Where influencers rise, connect, and thrive.</p>
         <a href="{{ route('login') }}" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Login Account</a>
-        <a href="{{ route('register') }}" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Register Account</a>
+        {{-- <a href="{{ route('register') }}" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Register Account</a> --}}
     </div>
 
     <div class="container mt-4">
