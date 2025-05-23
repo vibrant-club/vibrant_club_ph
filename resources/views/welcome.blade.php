@@ -89,32 +89,182 @@
 
         <h2 class="section-title text-center mb-4">📸 Featured Creators</h2>
         <div class="row text-center">
-            <div class="col-md-4 text-center py-3">
-                <img src="{{ asset('images/pic1.jpg') }}" class="img-fluid rounded-circle mb-3"
+            <div class="col-md-4 text-center py-3 border">
+                <img src="{{ asset('images/logo2.png') }}" class="img-fluid rounded-circle mb-3"
                     style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
 
-                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">JONES AND JANNA</h5>
-                <p class="text-muted mb-3" style="font-size: 0.95rem;">Food and Life Style Vlogger</p>
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">VIBRANT CLUB PH</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Networking and Vlogging Company</p>
 
-                <h5 class="mb-2" style="font-size: 1rem;">
+                <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-tiktok me-2"></i>
-                    <a href="https://www.tiktok.com/@jonesftjana.10" target="_blank"
+                    <a href="https://www.tiktok.com/vibrant.club.ph" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        jonesftjana.10
+                        vibrant.club.ph
                     </a>
                 </h5>
-                <h5 class="mb-2" style="font-size: 1rem;">
+                <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-facebook me-2 text-primary"></i>
-                    <a href="https://www.facebook.com/jonesftjana.10" target="_blank"
+                    <a href="https://www.facebook.com/vibrant.club.ph" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        jonesftjana.10
+                        vibrant.club.ph
                     </a>
                 </h5>
-                <h5 class="mb-0" style="font-size: 1rem;">
+                <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
-                    <a href="https://www.instagram.com/jonesftjana.10" target="_blank"
+                    <a href="https://www.instagram.com/vibrant.club.ph" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        jonesftjana.10
+                        vibrant.club.ph
+                    </a>
+                </h5>
+            </div>
+
+            <div class="col-md-4 text-center py-3 border">
+                <img src="{{ asset('images/logo2.png') }}" class="img-fluid rounded-circle mb-3"
+                    style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
+
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">VIBRANT CLUB PH</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Networking and Vlogging Company</p>
+
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-tiktok me-2"></i>
+                    <a href="https://www.tiktok.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-facebook me-2 text-primary"></i>
+                    <a href="https://www.facebook.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
+                    <a href="https://www.instagram.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
+                    </a>
+                </h5>
+            </div>
+
+            <div class="col-md-4 text-center py-3 border">
+                <img src="{{ asset('images/logo2.png') }}" class="img-fluid rounded-circle mb-3"
+                    style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
+
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">VIBRANT CLUB PH</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Networking and Vlogging Company</p>
+
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-tiktok me-2"></i>
+                    <a href="https://www.tiktok.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-facebook me-2 text-primary"></i>
+                    <a href="https://www.facebook.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
+                    <a href="https://www.instagram.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
+                    </a>
+                </h5>
+            </div>
+
+            <div class="col-md-4 text-center py-3 border">
+                <img src="{{ asset('images/logo2.png') }}" class="img-fluid rounded-circle mb-3"
+                    style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
+
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">VIBRANT CLUB PH</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Networking and Vlogging Company</p>
+
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-tiktok me-2"></i>
+                    <a href="https://www.tiktok.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-facebook me-2 text-primary"></i>
+                    <a href="https://www.facebook.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
+                    <a href="https://www.instagram.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
+                    </a>
+                </h5>
+            </div>
+
+            <div class="col-md-4 text-center py-3 border">
+                <img src="{{ asset('images/logo2.png') }}" class="img-fluid rounded-circle mb-3"
+                    style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
+
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">VIBRANT CLUB PH</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Networking and Vlogging Company</p>
+
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-tiktok me-2"></i>
+                    <a href="https://www.tiktok.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-facebook me-2 text-primary"></i>
+                    <a href="https://www.facebook.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
+                    <a href="https://www.instagram.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
+                    </a>
+                </h5>
+            </div>
+
+            <div class="col-md-4 text-center py-3 border">
+                <img src="{{ asset('images/logo2.png') }}" class="img-fluid rounded-circle mb-3"
+                    style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
+
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">VIBRANT CLUB PH</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Networking and Vlogging Company</p>
+
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-tiktok me-2"></i>
+                    <a href="https://www.tiktok.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-facebook me-2 text-primary"></i>
+                    <a href="https://www.facebook.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
+                    <a href="https://www.instagram.com/vibrant.club.ph" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        vibrant.club.ph
                     </a>
                 </h5>
             </div>
