@@ -88,20 +88,34 @@
         <div class="row text-center">
             <div class="col-md-4 border">
                 <img src="{{ asset('images/logo3.png') }}" class="rounded-circle img-fluid mb-2">
-                <h5 class="fw-bold">@lifestylequeenie</h5>
-                <p>Beauty & Wellness Guru</p>
+                <h5 class="fw-bold">@vibrant_club_influencer</h5>
+                <p>vibrant club niche</p>
             </div>
             <div class="col-md-4 border">
                 <img src="{{ asset('images/logo3.png') }}" class="rounded-circle img-fluid mb-2">
-                <h5 class="fw-bold">@techiegram</h5>
-                <p>Gadget Reviewer</p>
+                <h5 class="fw-bold">@vibrant_club_influencer</h5>
+                <p>vibrant club niche</p>
             </div>
             <div class="col-md-4 border">
                 <img src="{{ asset('images/logo3.png') }}" class="rounded-circle img-fluid mb-2">
-                <h5 class="fw-bold">@foodiefrenzy</h5>
-                <p>Travel & Food Blogger</p> 
+                <h5 class="fw-bold">@vibrant_club_influencer</h5>
+                <p>vibrant club niche</p>
             </div>
-        {{-- / --}}
+             <div class="col-md-4 border">
+                <img src="{{ asset('images/logo3.png') }}" class="rounded-circle img-fluid mb-2">
+                <h5 class="fw-bold">@vibrant_club_influencer</h5>
+                <p>vibrant club niche</p>
+            </div>
+             <div class="col-md-4 border">
+                <img src="{{ asset('images/logo3.png') }}" class="rounded-circle img-fluid mb-2">
+                <h5 class="fw-bold">@vibrant_club_influencer</h5>
+                <p>vibrant club niche</p>
+            </div>
+             <div class="col-md-4 border">
+                <img src="{{ asset('images/logo3.png') }}" class="rounded-circle img-fluid mb-2">
+                <h5 class="fw-bold">@vibrant_club_influencer</h5>
+                <p>vibrant club niche</p>
+            </div>
         </div>
 
         <div class="text-center mt-5">
