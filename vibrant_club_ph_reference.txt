@@ -204,6 +204,9 @@ ssh root@157.230.252.114
 !Digitalocean@032023x
 cd /var/www/vibrant_club_ph
 git pull origin master
+php artisan config:cache
+php artisan route:cache
+php artisan view:clear
 
 Do Laravel maintenance stuff(OPTIONAL)
 composer install --no-dev --optimize-autoloader
