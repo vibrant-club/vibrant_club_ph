@@ -2,49 +2,6 @@
 
 @section('content')
     <div class="container-fluid border border-secondary">
-        DOPE
-        <br>
-        DOCTYPE
-        <br>
-         DOPE
-        <br>
-        DOCTYPE
-        <br>
-         DOPE
-        <br>
-        DOCTYPE
-        <br>
-         DOPE
-        <br>
-        DOCTYPE
-        <br>
-         DOPE
-        <br>
-        DOCTYPE
-        <br>
-         DOPE
-        <br>
-        DOCTYPE
-        <br>
-         DOPE
-        <br>
-        DOCTYPE
-        <br>
-         DOPE
-        <br>
-        DOCTYPE
-        <br>
-         DOPE
-        <br>
-        DOCTYPE
-        <br>
-         DOPE
-        <br>
-        DOCTYPE
-        <br>
-         DOPE
-        <br>
-        DOCTYPE
-        <br>
+      THIS IS PROD
     </div>
 @endsection

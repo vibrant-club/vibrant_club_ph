@@ -44,5 +44,154 @@ php artisan db:seed --class=RegistrationCodeSeeder
 AESTHETIC REISTER
 https://chatgpt.com/c/682d7a50-9984-800e-a773-2427c26271b6
 
+-----------------------------------------------------------------------------
 
+GITHUB INITIALIZATION
+https://chatgpt.com/c/682eaf1b-22d4-800e-9ed1-645d81851e3d
+
+CREATE DROPLET IN DIGITAL OCEAN TO CONFIGURATION
+https://chatgpt.com/c/682eaf1b-22d4-800e-9ed1-645d81851e3d
+https://www.youtube.com/watch?v=28sH3i24ueY
+
+Droplet password: !Digitalocean@032023x
+HostName: VibrantClub
+
+STEPS IN CMD:
+ssh root@157.230.252.114
+!Digitalocean@032023x
+
+sudo apt update
+
+sudo apt install nginx
+Y/N = Y
+
+sudo apt install mysql-server
+Y/N = Y
+
+(not working)
+sudo apt install php8.2-fpm php-mysql
+
+(run this instead)
+sudo apt update
+sudo apt install software-properties-common -y
+sudo add-apt-repository ppa:ondrej/php -y
+sudo apt update
+sudo apt install php8.2 php8.2-fpm php8.2-cli php8.2-mysql php8.2-mbstring php8.2-xml php8.2-curl php8.2-zip php8.2-bcmath unzip -y
+php -v
+
+sudo apt install php-mysql
+Y/N = Y
+
+sudo apt install php-cli unzip
+
+sudo apt install composer -y
+
+curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+
+sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+sudo apt install php-mbstring php-xml php-bcmath
+
+GO TO PROJECT:
+cd /var/www/
+
+git clone https://github.com/vibrant-club/vibrant_club_ph.git
+
+cd /var/www/vibrant_club_ph
+
+composer install 
+
+composer update
+
+mv .env.example .env
+
+nano .env
+
+sudo mysql
+
+CREATE DATABASE vibrant_club_ph
+
+CREATE USER 'vibrant_club_ph_user'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
+
+GRANT ALL ON vibrant_club_ph.* TO 'vibrant_club_ph_user'@'%';
+
+exit 
+
+mysql -u vibrant_club_ph_user -p
+
+SHOW DATABASES	
+
+
+sudo chown -R $USER:www-data . 
+sudo find . -type f -exec chmod 664 {} \;
+sudo find . -type d -exec chmod 775 {} \;
+sudo chgrp -R www-data storage bootstrap/cache
+sudo chmod -R ug+rwx storage bootstrap/cache
+
+sudo nano /etc/nginx/sites-available/default
+
+
+server {
+    listen 80;
+    server_name 157.230.252.114;  
+    root /var/www/vibrant_club_ph/public;
+
+    add_header X-Frame-Options "SAMEORIGIN";
+    add_header X-XSS-Protection "1; mode=block";
+    add_header X-Content-Type-Options "nosniff";
+
+    index index.html index.htm index.php;
+
+    charset utf-8;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location /favicon.ico {
+        access_log off;
+        log_not_found off;
+    }
+
+    location /robots.txt {
+        access_log off;
+        log_not_found off;
+    }
+
+    error_page 404 /index.php;
+
+    location ~ \.php$ {
+        include fastcgi_params;
+        fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;  # Change this if using php8.1
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+        fastcgi_param DOCUMENT_ROOT $realpath_root;
+    }
+
+    location ~ /\.(?!well-known).* {
+        deny all;
+    }
+}
+
+
+service nginx restart
+
+php artisan key:generate
+
+sudo apt update
+sudo apt install nodejs npm -y
+
+node -v
+npm -v
+
+cd /var/www/vibrant_club_ph
+npm install
+
+npm install bootstrap sass resolve-url-loader --save-dev
+
+npm run build
+
+npm run dev
+
+----------------------------------------------------------------------------
 
