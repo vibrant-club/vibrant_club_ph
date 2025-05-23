@@ -101,7 +101,7 @@
                 <h5 class="fw-bold">@foodiefrenzy</h5>
                 <p>Travel & Food Blogger</p> 
             </div>
-        
+        {{-- / --}}
         </div>
 
         <div class="text-center mt-5">
