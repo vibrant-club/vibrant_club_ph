@@ -278,8 +278,8 @@
         </div>
 
         <div class="text-center mt-5">
-            <a href="{{ route('login') }}" class="btn btn-outline-pink text-white fw-semibold"
-                style="background-color: #ff0084;">Login to Your Account</a>
+            <a href="{{ route('register') }}" class="btn btn-outline-pink text-white fw-semibold"
+                style="background-color: #ff0084;">Join us</a>
         </div>
     </div>
 
