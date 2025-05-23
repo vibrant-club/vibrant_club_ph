@@ -99,7 +99,7 @@
             <div class="col-md-4 border">
                 <img src="{{ asset('images/logo3.png') }}" class="rounded-circle img-fluid mb-2">
                 <h5 class="fw-bold">@foodiefrenzy</h5>
-                <p>Travel & Food Blogger</p>
+                <p>Travel & Food Blogger</p> 
             </div>
         
         </div>
