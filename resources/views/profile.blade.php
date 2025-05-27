@@ -102,11 +102,11 @@
                 </div>
 
                 <div class="text-start mt-4">
-                    <button type="submit" class="btn btn-md btn-outline-vibrant px-4">
-                        <i class="fas fa-save me-2"></i> Save Changes
+                    <button type="submit" class="btn btn-sm btn-outline-vibrant px-4">
+                        <i class="fas fa-save me-2"></i> Save
                     </button>
 
-                    <button type="button" class="btn btn-md btn-outline-vibrant px-4"
+                    <button type="button" class="btn btn-sm btn-outline-vibrant px-4"
                         onclick="copyProfileLink('{{ route('profile.public', ['vibrant_username' => Auth::user()->vibrant_username]) }}')">
                         <i class="fas fa-share-alt me-2"></i> Share
                     </button>

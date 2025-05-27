@@ -61,7 +61,8 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto"></ul>
+                        <ul class="navbar-nav ms-auto"></ul>
+
                         <ul class="navbar-nav ms-auto">
                             @guest
                                 @if (Route::has('login'))
@@ -87,12 +88,18 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-end shadow small" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('my_profile') }}">
-                                            <i class="bi bi-person-circle"></i> Profile
+                                        <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('home') }}">
+                                            <i class="bi bi-person-circle"></i> Home
                                         </a>
 
                                         <div class="dropdown-divider"></div>
 
+                                         <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('my_profile') }}">
+                                            <i class="bi bi-person-circle"></i> Profile
+                                        </a>
+
+                                        <div class="dropdown-divider"></div>
+                                        
                                         <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('logout') }}"
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             <i class="bi bi-box-arrow-right"></i> {{ __('Logout') }}
@@ -106,6 +113,8 @@
 
                             @endguest
                         </ul>
+
+
                     </div>
                 </div>
             </nav>
