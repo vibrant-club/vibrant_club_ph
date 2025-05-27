@@ -26,6 +26,14 @@ class User extends Authenticatable
         'email',
         'password',
         'registration_code',
+        'about',
+        'profile_image',
+        'facebook',
+        'instagram',
+        'tiktok',
+        'twitter',
+        'youtube',
+        'vibrant_username',
     ];
 
     /**
