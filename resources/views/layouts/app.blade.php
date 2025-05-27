@@ -32,6 +32,16 @@
             background-color: #fff0f5;
             /* subtle light pink background */
         }
+
+        .btn-outline-vibrant {
+            color: #ff0084;
+            border: 1px solid #ff0084;
+        }
+
+        .btn-outline-vibrant:hover {
+            background-color: #ff0084;
+            color: #fff;
+        }
     </style>
 
 </head>

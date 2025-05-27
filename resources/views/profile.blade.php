@@ -14,9 +14,14 @@
                     {{ Auth::user()->lastname }} </span> <br>
                 <span class="fs-5 ">{{ Auth::user()->email }}</span>
             </div>
+
+            <div class="mt-3">
+                <label class="fw-semibold d-block mb-1">Introduction</label>
+                <textarea class="form-control" name="about" rows="5" placeholder="Write something about yourself...">{{ old('about', Auth::user()->about) }}</textarea>
+            </div>
         </div>
 
-        <div class="text-start p-4 fs-5 rounded shadow-sm ">
+        <div class="text-start p-3 fs-5 rounded shadow-sm ">
             <div class="mb-3">
                 <div class="input-group">
                     <span class="input-group-text bg-white border-end-0">
@@ -63,9 +68,8 @@
             </div>
 
             <div class="text-start mt-4">
-                <button class="btn btn-outline-primary px-4">Save Changes</button>
+                <button class="btn btn-outline-vibrant px-4">Save Changes</button>
             </div>
-
         </div>
 
 
