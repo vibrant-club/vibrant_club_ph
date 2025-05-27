@@ -7,16 +7,24 @@
             @method('PUT')
 
             <div class="text-center fs-5 rounded shadow-sm p-3">
-                <div style="position: relative; width: 200px; height: 200px; margin: auto;">
-                    <img src="{{ Auth::user()->profile_image
-                        ? asset('storage/profile_images/' . Auth::user()->profile_image)
-                        : asset('images/default-profile.png') }}"
-                        alt="Profile Image" class="rounded-circle"
-                        style="width: 100%; height: 100%; object-fit: cover; border: 3px solid #ff0084;">
+                <div class="position-relative mx-auto mb-2" style="width: 200px; height: 200px;">
+                    <img id="profilePreview"
+                        src="{{ Auth::user()->profile_image
+                            ? asset('storage/profile_images/' . Auth::user()->profile_image)
+                            : asset('images/logo3.png') }}"
+                        class="rounded-circle w-100 h-100 border border-3 border-danger" style="object-fit: cover;"
+                        alt="Profile Image">
 
-                    <input type="file" name="profile_image" accept="image/*"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; border-radius: 50%; cursor: pointer;">
+                    <!-- Inset camera icon -->
+                    <label for="profileImageInput" class="position-absolute"
+                        style="bottom: 10px; right: 10px; background: rgba(0,0,0,0.7); padding: 8px; border-radius: 50%; cursor: pointer;">
+                        <i class="fas fa-camera text-white"></i>
+                    </label>
+
+                    <input type="file" id="profileImageInput" name="profile_image" accept="image/*" class="d-none"
+                        onchange="document.getElementById('profilePreview').src = window.URL.createObjectURL(this.files[0])">
                 </div>
+
 
 
                 <div class="lh-sm">

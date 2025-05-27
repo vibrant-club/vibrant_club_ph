@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -41,5 +42,11 @@ class ProfileController extends Controller
         $user->save();
 
         return redirect()->back()->with('success', 'Profile updated successfully!');
+    }
+
+    public function showPublicProfile($vibrant_username)
+    {
+        $user = User::where('vibrant_username', $vibrant_username)->firstOrFail();
+        return view('profile-public', compact('user')); 
     }
 }
