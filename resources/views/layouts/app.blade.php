@@ -80,8 +80,6 @@
                                         class="nav-link dropdown-toggle d-flex align-items-center gap-2 text-white fw-semibold "
                                         href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false" v-pre>
-                                        <img src="{{ asset('images/logo3.png') }}" alt="Avatar" class="rounded-circle"
-                                            width="30" height="30">
                                         <span>
                                             {{ Auth::user()->firstname }}
                                             {{ Auth::user()->middlename ? Auth::user()->middlename . ' ' : '' }}{{ Auth::user()->lastname }}
@@ -103,12 +101,6 @@
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                             @csrf
                                         </form>
-
-                                        <div class="dropdown-divider"></div>
-
-                                        <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('profile') }}">
-                                            <i class="bi bi-person-circle"></i> Profile
-                                        </a>
                                     </div>
                                 </li>
 
