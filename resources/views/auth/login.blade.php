@@ -67,7 +67,7 @@
 
                             {{-- Forgot Password --}}
                             @if (Route::has('password.request'))
-                                <div class="text-center mb-3 fs-5">
+                                <div class="text-center mb-3 fs-6">
                                     <a class="text-decoration-none" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>

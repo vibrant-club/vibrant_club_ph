@@ -14,9 +14,6 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/31d1f8c1cb.js" crossorigin="anonymous"></script>
-
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
@@ -40,7 +37,7 @@
 <body>
     <div id="app">
         @auth
-            <nav class="navbar navbar-expand-md shadow-sm rounded-4 mt-2 mx-2" style="background-color: #ff0084;">
+            <nav class="navbar navbar-expand-md" style="background-color: #ff0084;">
                 <div class="container">
                     <a class="navbar-brand text-white fw-bold" href="{{ url('/') }}">
                         VIBRANT CLUB PH
@@ -67,24 +64,42 @@
                                 @endif
                             @else
                                 <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle text-white fw-semibold"
+                                    <a id="navbarDropdown"
+                                        class="nav-link dropdown-toggle d-flex align-items-center gap-2 text-white fw-semibold "
                                         href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false" v-pre>
-                                        {{ Auth::user()->firstname }}
-                                        {{ Auth::user()->middlename ? Auth::user()->middlename . ' ' : '' }}{{ Auth::user()->lastname }}
+                                        <img src="{{ asset('images/logo3.png') }}" alt="Avatar" class="rounded-circle"
+                                            width="30" height="30">
+                                        <span>
+                                            {{ Auth::user()->firstname }}
+                                            {{ Auth::user()->middlename ? Auth::user()->middlename . ' ' : '' }}{{ Auth::user()->lastname }}
+                                        </span>
                                     </a>
 
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <div class="dropdown-menu dropdown-menu-end shadow small" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('profile') }}">
+                                            <i class="bi bi-person-circle"></i> Profile
+                                        </a>
+
+                                        <div class="dropdown-divider"></div>
+
+                                        <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('logout') }}"
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
+                                            <i class="bi bi-box-arrow-right"></i> {{ __('Logout') }}
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                             @csrf
                                         </form>
+
+                                        <div class="dropdown-divider"></div>
+
+                                        <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('profile') }}">
+                                            <i class="bi bi-person-circle"></i> Profile
+                                        </a>
                                     </div>
                                 </li>
+
                             @endguest
                         </ul>
                     </div>
@@ -92,7 +107,7 @@
             </nav>
 
         @endauth
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
     </div>
