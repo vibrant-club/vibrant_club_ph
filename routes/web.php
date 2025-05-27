@@ -14,9 +14,9 @@ Auth::routes();
 Route::middleware('auth')->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-    Route::view('/profile', 'profile')->name('profile');
+    Route::view('/my_profile', 'profile')->name('my_profile');
     Route::put('/profile_update', [ProfileController::class, 'update'])->name('profile.update');
 });
 
 // Public profile by vibrant_username
-Route::get('/profile/{vibrant_username}', [ProfileController::class, 'showPublicProfile'])->name('profile.public');
+Route::get('/username/{vibrant_username}', [ProfileController::class, 'showPublicProfile'])->name('profile.public');

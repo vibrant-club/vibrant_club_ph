@@ -102,9 +102,32 @@
                 </div>
 
                 <div class="text-start mt-4">
-                    <button type="submit" class="btn btn-md btn-outline-vibrant px-4">Save Changes</button>
+                    <button type="submit" class="btn btn-md btn-outline-vibrant px-4">
+                        <i class="fas fa-save me-2"></i> Save Changes
+                    </button>
+
+                    <button type="button" class="btn btn-md btn-outline-vibrant px-4"
+                        onclick="copyProfileLink('{{ route('profile.public', ['vibrant_username' => Auth::user()->vibrant_username]) }}')">
+                        <i class="fas fa-share-alt me-2"></i> Share
+                    </button>
                 </div>
+
+
+
             </div>
         </form>
     </div>
+
+
+    <script>
+        function copyProfileLink(url) {
+            navigator.clipboard.writeText(url).then(function() {
+                // Show confirmation popup
+                alert("Link copied to clipboard:\n" + url);
+            }, function(err) {
+                console.error('Failed to copy: ', err);
+                alert("Failed to copy the link.");
+            });
+        }
+    </script>
 @endsection

@@ -5,7 +5,7 @@
 
         <!-- Header Banner -->
         <div class="text-center py-4"
-            style=" background: linear-gradient(135deg, #ff0084, #f4b1d4);  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+            style=" background: linear-gradient(135deg, #ff0084, #e489b8);  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
             <h1 class="text-white mt-2 mb-0 fw-bold" style="font-size: 1.5rem;">VIBRANT CLUB PH</h1>
             <p class="text-white-50 mb-0 fs-5">Public Influencer Profile</p>
         </div>
@@ -31,7 +31,7 @@
             @endif
         </div>
 
-        <div class="text-start p-3 fs-5 rounded shadow-sm border">
+        <div class="text-start p-3 fs-5 rounded shadow-sm border" style="word-break: break-all;">
             @if ($user->facebook)
                 <div class="mb-2">
                     <i class="fab fa-facebook text-primary me-2"></i>
@@ -66,6 +66,11 @@
                     <a href="{{ $user->youtube }}" target="_blank">{{ $user->youtube }}</a>
                 </div>
             @endif
+        </div>
+        
+        <div class="text-center mt-3">
+            <a href="{{ route('register') }}" class="btn btn-outline-pink text-white fw-semibold"
+                style="background-color: #ff0084;">Join us</a>
         </div>
     </div>
 @endsection

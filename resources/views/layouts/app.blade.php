@@ -87,7 +87,7 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-end shadow small" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('profile') }}">
+                                        <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('my_profile') }}">
                                             <i class="bi bi-person-circle"></i> Profile
                                         </a>
 
