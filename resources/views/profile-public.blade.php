@@ -24,50 +24,66 @@
             </div>
 
             @if ($user->about)
-                <div class="mt-3">
-                    <label class="fw-semibold d-block mb-1">About</label>
+                <div class="mt-3 lh-sm">
+                    <label class="fw-semibold d-block mb-1">Introduction</label>
                     <p class="text-muted">{{ $user->about }}</p>
                 </div>
             @endif
         </div>
 
-        <div class="text-start p-3 fs-5 rounded shadow-sm border" style="word-break: break-all;">
+        <div class="text-start p-3 fs-5 rounded shadow-sm border">
             @if ($user->facebook)
-                <div class="mb-2">
+                <div class="mb-2 d-flex align-items-center">
                     <i class="fab fa-facebook text-primary me-2"></i>
-                    <a href="{{ $user->facebook }}" target="_blank">{{ $user->facebook }}</a>
+                    <a href="{{ $user->facebook }}" target="_blank" class="text-truncate d-inline-block"
+                        style="max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                        {{ $user->facebook }}
+                    </a>
                 </div>
             @endif
 
             @if ($user->instagram)
-                <div class="mb-2">
+                <div class="mb-2 d-flex align-items-center">
                     <i class="fab fa-instagram text-danger me-2"></i>
-                    <a href="{{ $user->instagram }}" target="_blank">{{ $user->instagram }}</a>
+                    <a href="{{ $user->instagram }}" target="_blank" class="text-truncate d-inline-block"
+                        style="max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                        {{ $user->instagram }}
+                    </a>
                 </div>
             @endif
 
             @if ($user->tiktok)
-                <div class="mb-2">
+                <div class="mb-2 d-flex align-items-center">
                     <i class="fab fa-tiktok text-dark me-2"></i>
-                    <a href="{{ $user->tiktok }}" target="_blank">{{ $user->tiktok }}</a>
+                    <a href="{{ $user->tiktok }}" target="_blank" class="text-truncate d-inline-block"
+                        style="max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                        {{ $user->tiktok }}
+                    </a>
                 </div>
             @endif
 
             @if ($user->twitter)
-                <div class="mb-2">
+                <div class="mb-2 d-flex align-items-center">
                     <i class="fab fa-twitter text-info me-2"></i>
-                    <a href="{{ $user->twitter }}" target="_blank">{{ $user->twitter }}</a>
+                    <a href="{{ $user->twitter }}" target="_blank" class="text-truncate d-inline-block"
+                        style="max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                        {{ $user->twitter }}
+                    </a>
                 </div>
             @endif
 
             @if ($user->youtube)
-                <div class="mb-2">
+                <div class="mb-2 d-flex align-items-center">
                     <i class="fab fa-youtube text-danger me-2"></i>
-                    <a href="{{ $user->youtube }}" target="_blank">{{ $user->youtube }}</a>
+                    <a href="{{ $user->youtube }}" target="_blank" class="text-truncate d-inline-block"
+                        style="max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                        {{ $user->youtube }}
+                    </a>
                 </div>
             @endif
         </div>
-        
+
+
         <div class="text-center mt-3">
             <a href="{{ route('register') }}" class="btn btn-outline-pink text-white fw-semibold"
                 style="background-color: #ff0084;">Join us</a>
