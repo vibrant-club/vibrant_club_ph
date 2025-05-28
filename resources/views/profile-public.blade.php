@@ -32,7 +32,7 @@
 
             @if ($user->tags->count())
                 <div class="mt-3 lh-sm">
-                    <div class="d-flex flex-wrap gap-2">
+                    <div class="d-flex flex-wrap gap-1">
                         @foreach ($user->tags as $tag)
                             <span class="px-3 py-1 rounded-pill text-white"
                                 style="background-color: #ff0084; font-size: 0.75rem;">
