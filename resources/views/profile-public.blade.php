@@ -47,7 +47,7 @@
 
         </div>
 
-        <div class="text-start p-3 fs-5 rounded shadow-sm border">
+        <div class="text-start p-3 fs-6 rounded shadow-sm border">
             @if ($user->facebook)
                 <div class="mb-2 d-flex align-items-center">
                     <i class="fab fa-facebook text-primary me-2"></i>
