@@ -25,8 +25,8 @@
 
             @if ($user->about)
                 <div class="mt-3 lh-sm">
-                    <label class="fw-semibold d-block mb-1">Introduction</label>
-                    <p class="text-muted">{{ $user->about }}</p>
+                    <label class="fw-semibold d-block mb-1 fs-5">Introduction</label>
+                    <p class="text-muted fs-6">{{ $user->about }}</p>
                 </div>
             @endif
 
