@@ -101,7 +101,7 @@
 
 
         <div class="text-center mt-3">
-            <a href="{{ route('register') }}" class="btn btn-outline-pink text-white fw-semibold"
+            <a href="{{ route('register') }}" class="btn btn-sm btn-outline-pink text-white fw-semibold"
                 style="background-color: #ff0084;">Join us</a>
         </div>
     </div>
