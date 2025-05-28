@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,19 +19,16 @@ class ProfileController extends Controller
         if ($request->hasFile('profile_image')) {
             $file = $request->file('profile_image');
 
-            // Delete old image if it exists
             if ($user->profile_image && Storage::disk('public')->exists('profile_images/' . $user->profile_image)) {
                 Storage::disk('public')->delete('profile_images/' . $user->profile_image);
             }
 
-            // Store new image
             $filename = uniqid() . '.' . $file->getClientOriginalExtension();
             $file->storeAs('profile_images', $filename, 'public');
-
             $user->profile_image = $filename;
         }
 
-        // Update text fields
+        // Update other profile fields
         $user->about = $request->input('about');
         $user->vibrant_username = $request->input('vibrant_username');
         $user->facebook = $request->input('facebook');
@@ -38,8 +36,27 @@ class ProfileController extends Controller
         $user->tiktok = $request->input('tiktok');
         $user->twitter = $request->input('twitter');
         $user->youtube = $request->input('youtube');
-
         $user->save();
+
+        if ($request->filled('tags')) {
+            $tagNames = explode(',', $request->input('tags'));
+
+            // Clean up tag names: trim and filter empty strings
+            $tagNames = array_filter(array_map('trim', $tagNames));
+
+            $tagIds = [];
+            foreach ($tagNames as $name) {
+                // firstOrCreate ensures new tags are added if they don't exist
+                $tag = Tag::where('name', $name)->first();
+                if ($tag) {
+                    $tagIds[] = $tag->id;
+                }
+            }
+
+            $user->tags()->sync($tagIds);
+        } else {
+            $user->tags()->detach();
+        }
 
         return redirect()->back()->with('success', 'Profile updated successfully!');
     }
@@ -47,6 +64,6 @@ class ProfileController extends Controller
     public function showPublicProfile($vibrant_username)
     {
         $user = User::where('vibrant_username', $vibrant_username)->firstOrFail();
-        return view('profile-public', compact('user')); 
+        return view('profile-public', compact('user'));
     }
 }

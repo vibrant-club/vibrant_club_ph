@@ -18,7 +18,7 @@
                     alt="Profile Image">
             </div>
 
-            <div class="lh-sm">
+            <div class="lh-1">
                 <span class="fs-3 fw-bold">{{ $user->firstname }} {{ $user->middlename }} {{ $user->lastname }}</span><br>
                 <span class="text-muted">{{ $user->email }}</span>
             </div>
@@ -29,6 +29,20 @@
                     <p class="text-muted">{{ $user->about }}</p>
                 </div>
             @endif
+
+            @if ($user->tags->count())
+                <div class="mt-3 lh-sm">
+                    <div class="d-flex flex-wrap gap-2">
+                        @foreach ($user->tags as $tag)
+                            <span class="px-3 py-1 rounded-pill text-white" style="background-color: #ff0084;">
+                                #{{ $tag->name }}
+                            </span>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
+
+
         </div>
 
         <div class="text-start p-3 fs-5 rounded shadow-sm border">

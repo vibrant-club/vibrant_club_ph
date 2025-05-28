@@ -15,7 +15,6 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
@@ -26,13 +25,20 @@
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
 
+    <!-- Tagify CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" />
+    <!-- Tagify JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
+
+
     <style>
+        /* app.blade.php */
         body {
             font-family: 'Nunito', sans-serif;
             background-color: #fff0f5;
-            /* subtle light pink background */
         }
 
+        /* prifole.blade.php */
         .btn-outline-vibrant {
             color: #ff0084;
             border: 1px solid #ff0084;
@@ -42,7 +48,26 @@
             background-color: #ff0084;
             color: #fff;
         }
+
+        .tag-badge {
+            background-color: #f44336;
+            /* Vibrant red, customize as needed */
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tag-badge .remove-tag {
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+        }
     </style>
+
 
 </head>
 
@@ -94,12 +119,13 @@
 
                                         <div class="dropdown-divider"></div>
 
-                                         <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('my_profile') }}">
+                                        <a class="dropdown-item d-flex align-items-center gap-2"
+                                            href="{{ route('my_profile') }}">
                                             <i class="bi bi-person-circle"></i> Profile
                                         </a>
 
                                         <div class="dropdown-divider"></div>
-                                        
+
                                         <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('logout') }}"
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             <i class="bi bi-box-arrow-right"></i> {{ __('Logout') }}

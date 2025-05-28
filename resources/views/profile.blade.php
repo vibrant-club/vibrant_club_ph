@@ -33,11 +33,21 @@
                     <span class="fs-5">{{ Auth::user()->email }}</span>
                 </div>
 
-                <div class="mt-3">
+                <div class="mt-3 mb-2">
                     <label class="fw-semibold d-block mb-1">Introduction</label>
                     <textarea class="form-control" name="about" rows="4" placeholder="Write something about yourself...">{{ old('about', Auth::user()->about) }}</textarea>
                 </div>
+
+                <div class="mb-3 text-start">
+                    <input name="tags" id="tag-input" class="form-control" placeholder="Select or type tags..."
+                        value="{{ old('tags', implode(',', Auth::user()->tags->pluck('name')->toArray())) }}">
+                </div>
+
+
             </div>
+
+
+
 
             <div class="text-start p-3 fs-5 rounded shadow-sm">
                 <div class="mb-3">
@@ -106,10 +116,17 @@
                         <i class="fas fa-save me-2"></i> Save
                     </button>
 
-                    <button type="button" class="btn btn-sm btn-outline-vibrant px-4"
-                        onclick="copyProfileLink('{{ route('profile.public', ['vibrant_username' => Auth::user()->vibrant_username]) }}')">
-                        <i class="fas fa-share-alt me-2"></i> Share
-                    </button>
+                    @php
+                        $username = Auth::user()->vibrant_username;
+                    @endphp
+
+                    @if (!empty($username))
+                        <button type="button" class="btn btn-sm btn-outline-vibrant px-4"
+                            onclick="copyProfileLink('{{ route('profile.public', ['vibrant_username' => $username]) }}')">
+                            <i class="fas fa-share-alt me-2"></i> Share
+                        </button>
+                    @endif
+
                 </div>
 
 
@@ -120,6 +137,7 @@
 
 
     <script>
+        //SHARE PROFILE BUTTON 
         function copyProfileLink(url) {
             navigator.clipboard.writeText(url).then(function() {
                 // Show confirmation popup
@@ -129,5 +147,28 @@
                 alert("Failed to copy the link.");
             });
         }
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const input = document.querySelector('#tag-input');
+
+            // Pass predefined tags from Laravel to JavaScript
+            const predefinedTags = @json(\App\Models\Tag::pluck('name'));
+
+            const tagify = new Tagify(input, {
+                whitelist: predefinedTags,
+                dropdown: {
+                    enabled: 0, // show suggestions on focus
+                    maxItems: 20,
+                    classname: "tags-look",
+                    closeOnSelect: false
+                }
+            });
+
+            // Before form submit, convert tagify's JSON to CSV string
+            input.closest('form').addEventListener('submit', function() {
+                input.value = tagify.value.map(item => item.value).join(',');
+            });
+        });
     </script>
 @endsection

@@ -63,4 +63,9 @@ class User extends Authenticatable
     {
         $this->notify(new ResetPasswordNotificationCustom($token));
     }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, 'tag_user_tbl');
+    }
 }
