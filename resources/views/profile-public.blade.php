@@ -34,13 +34,15 @@
                 <div class="mt-3 lh-sm">
                     <div class="d-flex flex-wrap gap-2">
                         @foreach ($user->tags as $tag)
-                            <span class="px-3 py-1 rounded-pill text-white" style="background-color: #ff0084;">
+                            <span class="px-3 py-1 rounded-pill text-white"
+                                style="background-color: #ff0084; font-size: 1rem;">
                                 #{{ $tag->name }}
                             </span>
                         @endforeach
                     </div>
                 </div>
             @endif
+
 
 
         </div>
