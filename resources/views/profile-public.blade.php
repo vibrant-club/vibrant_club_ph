@@ -102,7 +102,23 @@
 
         <div class="text-center mt-3">
             <a href="{{ route('register') }}" class="btn btn-sm btn-outline-pink text-white fw-semibold"
-                style="background-color: #ff0084;">Join us</a>
+                style="background-color: #ff0084;"> <i class="fa-solid fa-arrow-right-to-bracket me-2"></i>Join us</a>
+
+            <button type="button" class="btn btn-sm btn-outline-pink text-white fw-semibold"
+                style="background-color: #ff0084;" onclick="copyCurrentUrl()">
+                <i class="fas fa-share-alt me-2"></i> Share
+            </button>
         </div>
     </div>
+
+
+
+    <script>
+        function copyCurrentUrl() {
+            navigator.clipboard.writeText(window.location.href)
+                .then(() => alert('Link copied to clipboard!'))
+                .catch(err => alert('Failed to copy link: ' + err));
+        }
+    </script>
+
 @endsection
