@@ -68,6 +68,25 @@
             font-weight: bold;
             color: white;
         }
+
+        .text-vibrant {
+            color: #ff0084 !important;
+        }
+
+        .bg-vibrant {
+            background-color: #ff0084 !important;
+        }
+
+        .pagination .page-link {
+            border-radius: 50px;
+            padding: 6px 12px;
+            transition: all 0.3s ease;
+        }
+
+        .pagination .page-link:hover {
+            background-color: #ff0084;
+            color: white;
+        }
     </style>
 
 

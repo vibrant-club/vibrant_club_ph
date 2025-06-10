@@ -30,14 +30,13 @@
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
             transform: translateY(-4px);
         }
+
     </style>
 
     <div class="container-fluid p-4 border">
         <h2 class="mb-4 fw-bold text-vibrant">📢 Available Campaigns</h2>
 
         <div class="row g-4">
-
-
             @foreach ($campaigns as $campaign)
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card card-glass h-100">
@@ -80,11 +79,15 @@
                             </a>
                         </div>
                     </div>
+
                 </div>
             @endforeach
+        </div>
 
-
+        <div class="d-flex justify-content-center mt-4">
+            {{ $campaigns->links('vendor.pagination.tailwind') }}
 
         </div>
+
     </div>
 @endsection

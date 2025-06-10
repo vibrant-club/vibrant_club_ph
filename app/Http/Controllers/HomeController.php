@@ -24,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $campaigns = Campaign::all(); // or paginate() if needed
+        // $campaigns = Campaign::all(); // or paginate() if needed
+        $campaigns = Campaign::latest()->paginate(6); 
         return view('home', compact('campaigns'));
     }
 }
