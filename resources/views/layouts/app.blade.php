@@ -69,7 +69,6 @@
             font-weight: bold;
             color: white;
         }
-        
     </style>
 
 
@@ -121,13 +120,15 @@
                                             <i class="bi bi-megaphone"></i>Campaigns
                                         </a>
 
-                                         <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('home') }}">
-                                           &nbsp; <i class="bi bi-caret-right"></i>  Active Campaigns
+                                        <a class="dropdown-item d-flex align-items-center gap-2" href="#"
+                                            data-bs-toggle="modal" data-bs-target="#addCampaignModal">
+                                            &nbsp; <i class="bi bi-caret-right"></i> Add New Campaigns
                                         </a>
 
-                                         <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('home') }}">
+
+                                        {{-- <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('home') }}">
                                            &nbsp; <i class="bi bi-caret-right"></i>  Inactive Campaigns
-                                        </a>
+                                        </a> --}}
 
                                         <div class="dropdown-divider"></div>
 
