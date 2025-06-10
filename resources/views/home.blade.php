@@ -37,7 +37,7 @@
 
         <form method="GET" action="{{ route('home') }}" class="mb-4">
             <div class="input-group">
-                <input type="text" name="search" class="form-control" placeholder="Search campaigns..."
+                <input type="text" name="search" class="form-control" placeholder="Search campaigns title or tags... "
                     value="{{ request('search') }}">
 
                 <button type="submit" class="btn btn-vibrant-outline">Search</button>
@@ -52,6 +52,7 @@
         <div class="row">
             @foreach ($campaigns as $campaign)
                 <div class="col-md-6 col-lg-4 mb-4">
+
                     <div class="card card-glass h-100">
                         <div class="card-body px-4 py-4">
                             <h5 class="card-title fw-bold text-dark mb-2">{{ $campaign->title }}</h5>
@@ -85,6 +86,20 @@
                                 </li>
                             </ul>
                         </div>
+
+                        {{-- 👇 Tags section inserted here --}}
+                        @if (!empty($campaign->tags) && is_array(json_decode($campaign->tags, true)))
+                            <div class="px-4 pb-2">
+                                <div class="d-flex flex-wrap gap-2">
+                                    @foreach (json_decode($campaign->tags, true) as $tag)
+                                        <span class="badge bg-vibrant text-white rounded-pill px-3 py-1">
+                                            <i class="fas fa-tag me-1"></i> {{ $tag }}
+                                        </span>
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endif
+
                         <div class="card-footer bg-transparent border-0 text-end px-4 pb-3">
                             <a href="{{ $campaign->form_link }}" class="btn btn-sm btn-vibrant-outline rounded-pill px-4"
                                 target="_blank">

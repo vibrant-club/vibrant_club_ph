@@ -32,7 +32,10 @@ class HomeController extends Controller
         $search = $request->input('search');
 
         $campaigns = Campaign::when($search, function ($query, $search) {
-            return $query->where('title', 'like', '%' . $search . '%');
+            return $query->where(function ($q) use ($search) {
+                $q->where('title', 'like', '%' . $search . '%')
+                    ->orWhere('tags', 'like', '%"' . $search . '"%'); // JSON match for exact tag
+            });
         })->latest()->paginate(6);
 
         return view('home', compact('campaigns', 'search'));
