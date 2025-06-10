@@ -26,6 +26,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <!-- Tagify CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" />
@@ -68,34 +69,7 @@
             font-weight: bold;
             color: white;
         }
-
-        /* campaign dropdown */
-        .dropdown-submenu {
-            position: relative;
-        }
-
-        .dropdown-submenu>.dropdown-menu {
-            top: 0;
-            left: 100%;
-            /* Default: open to the right */
-            margin-left: 0.1rem;
-            display: none;
-            position: absolute;
-            z-index: 1000;
-        }
-
-        /* Show submenu on hover */
-        .dropdown-submenu:hover>.dropdown-menu {
-            display: block;
-        }
-
-        /* Fix overflow: If parent is near right edge, open to the left */
-        .dropdown-submenu.dropstart>.dropdown-menu {
-            left: auto;
-            right: 100%;
-            margin-left: 0;
-            margin-right: 0.1rem;
-        }
+        
     </style>
 
 
@@ -143,15 +117,17 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-end shadow small" aria-labelledby="navbarDropdown">
-                                        <!-- Campaigns with Submenu -->
-                                        <div class="dropdown-submenu dropstart position-relative">
-                                            <a class="dropdown-item dropdown-toggle" href="#">Campaigns</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="{{ route('my_profile') }}">Active Campaigns</a></li>
-                                                <li><a class="dropdown-item" href="{{ route('my_profile') }}">Archived Campaigns</a></li>
-                                            </ul>
-                                        </div>
+                                        <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('home') }}">
+                                            <i class="bi bi-megaphone"></i>Campaigns
+                                        </a>
 
+                                         <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('home') }}">
+                                           &nbsp; <i class="bi bi-caret-right"></i>  Active Campaigns
+                                        </a>
+
+                                         <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('home') }}">
+                                           &nbsp; <i class="bi bi-caret-right"></i>  Inactive Campaigns
+                                        </a>
 
                                         <div class="dropdown-divider"></div>
 
@@ -171,7 +147,6 @@
                                             @csrf
                                         </form>
                                     </div>
-
                                 </li>
 
                             @endguest
