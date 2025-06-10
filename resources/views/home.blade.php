@@ -6,6 +6,10 @@
             color: #ff0084;
         }
 
+        .bg-vibrant {
+            background-color: #ff0084;
+        }
+
         .btn-vibrant-outline {
             color: #ff0084;
             border: 1px solid #ff0084;
@@ -37,7 +41,7 @@
 
         <form method="GET" action="{{ route('home') }}" class="mb-4">
             <div class="input-group">
-                <input type="text" name="search" class="form-control" placeholder="Search campaigns title or tags... "
+                <input type="text" name="search" class="form-control" placeholder="Search campaigns..."
                     value="{{ request('search') }}">
 
                 <button type="submit" class="btn btn-vibrant-outline">Search</button>
@@ -99,6 +103,8 @@
                                 </div>
                             </div>
                         @endif
+
+
 
                         <div class="card-footer bg-transparent border-0 text-end px-4 pb-3">
                             <a href="{{ $campaign->form_link }}" class="btn btn-sm btn-vibrant-outline rounded-pill px-4"

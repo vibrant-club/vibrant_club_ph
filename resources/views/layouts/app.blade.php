@@ -69,23 +69,32 @@
             color: white;
         }
 
-        .text-vibrant {
-            color: #ff0084 !important;
+        /* campaign dropdown */
+        .dropdown-submenu {
+            position: relative;
         }
 
-        .bg-vibrant {
-            background-color: #ff0084 !important;
+        .dropdown-submenu>.dropdown-menu {
+            top: 0;
+            left: 100%;
+            /* Default: open to the right */
+            margin-left: 0.1rem;
+            display: none;
+            position: absolute;
+            z-index: 1000;
         }
 
-        .pagination .page-link {
-            border-radius: 50px;
-            padding: 6px 12px;
-            transition: all 0.3s ease;
+        /* Show submenu on hover */
+        .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
         }
 
-        .pagination .page-link:hover {
-            background-color: #ff0084;
-            color: white;
+        /* Fix overflow: If parent is near right edge, open to the left */
+        .dropdown-submenu.dropstart>.dropdown-menu {
+            left: auto;
+            right: 100%;
+            margin-left: 0;
+            margin-right: 0.1rem;
         }
     </style>
 
@@ -134,9 +143,15 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-end shadow small" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('home') }}">
-                                            <i class="bi bi-person-circle"></i> Campaigns
-                                        </a>
+                                        <!-- Campaigns with Submenu -->
+                                        <div class="dropdown-submenu dropstart position-relative">
+                                            <a class="dropdown-item dropdown-toggle" href="#">Campaigns</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="{{ route('my_profile') }}">Active Campaigns</a></li>
+                                                <li><a class="dropdown-item" href="{{ route('my_profile') }}">Archived Campaigns</a></li>
+                                            </ul>
+                                        </div>
+
 
                                         <div class="dropdown-divider"></div>
 
@@ -156,6 +171,7 @@
                                             @csrf
                                         </form>
                                     </div>
+
                                 </li>
 
                             @endguest
