@@ -30,11 +30,24 @@
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
             transform: translateY(-4px);
         }
-
     </style>
 
     <div class="container-fluid p-4 border">
         <h2 class="mb-4 fw-bold text-vibrant">📢 Available Campaigns</h2>
+
+        <form method="GET" action="{{ route('home') }}" class="mb-4">
+            <div class="input-group">
+                <input type="text" name="search" class="form-control" placeholder="Search campaigns..."
+                    value="{{ request('search') }}">
+
+                <button type="submit" class="btn btn-vibrant-outline">Search</button>
+
+                @if (request('search'))
+                    <a href="{{ route('home') }}" class="btn btn-outline-secondary">Clear</a>
+                @endif
+            </div>
+        </form>
+
 
         <div class="row g-4">
             @foreach ($campaigns as $campaign)
@@ -85,9 +98,9 @@
         </div>
 
         <div class="d-flex justify-content-center mt-4">
-            {{ $campaigns->links('vendor.pagination.tailwind') }}
-
+            {{ $campaigns->appends(['search' => request('search')])->links('vendor.pagination.simple-bootstrap-5') }}
         </div>
+
 
     </div>
 @endsection
