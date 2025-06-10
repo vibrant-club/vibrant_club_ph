@@ -40,7 +40,7 @@
             background-color: #fff0f5;
         }
 
-        /* prifole.blade.php */
+        /* profile.blade.php */
         .btn-outline-vibrant {
             color: #ff0084;
             border: 1px solid #ff0084;
@@ -116,7 +116,7 @@
 
                                     <div class="dropdown-menu dropdown-menu-end shadow small" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('home') }}">
-                                            <i class="bi bi-person-circle"></i> Home
+                                            <i class="bi bi-person-circle"></i> Campaigns
                                         </a>
 
                                         <div class="dropdown-divider"></div>
