@@ -8,4 +8,5 @@ class Campaign extends Model
 {
     protected $table = 'campaigns_tbl';
 
+    
 }

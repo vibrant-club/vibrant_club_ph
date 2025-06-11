@@ -109,6 +109,8 @@
 </head>
 
 <body>
+    @include('modals.add_new_campaign')
+
     <div id="app">
         @auth
             <nav class="navbar navbar-expand-md" style="background-color: #ff0084;">
@@ -150,8 +152,13 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-end shadow small" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item d-flex align-items-center gap-2" href="javascript:void(0)"
+                                            style="pointer-events: none; cursor: default;">
+                                            <i class="bi bi-megaphone"></i> Campaigns
+                                        </a>
+
                                         <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('home') }}">
-                                            <i class="bi bi-megaphone"></i>Campaigns
+                                            &nbsp; <i class="bi bi-caret-right"></i> Show All Campaigns
                                         </a>
 
                                         @auth
@@ -162,7 +169,6 @@
                                                 </a>
                                             @endif
                                         @endauth
-
 
 
                                         {{-- <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('home') }}">
