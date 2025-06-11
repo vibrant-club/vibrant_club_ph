@@ -69,6 +69,40 @@
             font-weight: bold;
             color: white;
         }
+
+        /* home.blade.php */
+        .text-vibrant {
+            color: #ff0084;
+        }
+
+        .bg-vibrant {
+            background-color: #ff0084;
+        }
+
+        .btn-vibrant-outline {
+            color: #ff0084;
+            border: 1px solid #ff0084;
+            transition: all 0.3s ease;
+        }
+
+        .btn-vibrant-outline:hover {
+            background-color: #ff0084;
+            color: #fff;
+        }
+
+        .card-glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(6px);
+            border: 2px solid #ff0084;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .card-glass:hover {
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
     </style>
 
 
@@ -120,10 +154,15 @@
                                             <i class="bi bi-megaphone"></i>Campaigns
                                         </a>
 
-                                        <a class="dropdown-item d-flex align-items-center gap-2" href="#"
-                                            data-bs-toggle="modal" data-bs-target="#addCampaignModal">
-                                            &nbsp; <i class="bi bi-caret-right"></i> Add New Campaigns
-                                        </a>
+                                        @auth
+                                            @if (auth()->user()->role == 1)
+                                                <a class="dropdown-item d-flex align-items-center gap-2" href="#"
+                                                    data-bs-toggle="modal" data-bs-target="#addCampaignModal">
+                                                    &nbsp; <i class="bi bi-caret-right"></i> Add New Campaigns
+                                                </a>
+                                            @endif
+                                        @endauth
+
 
 
                                         {{-- <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('home') }}">
