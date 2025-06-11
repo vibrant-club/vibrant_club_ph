@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -29,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/my_profile';
 
     /**
      * Create a new controller instance.
@@ -89,6 +90,15 @@ class RegisterController extends Controller
             ->where('id', $code->id)
             ->update(['status' => 1]);
 
+        // Set expiration 1 year from now
+        // $expiredAt = Carbon::now()->addYear();
+
+        // Set expiration 1 month from now
+        $expiredAt = Carbon::now()->addMonth();
+
+        // Set expiration 30 days from now
+        // $expiredAt = Carbon::now()->addDays(30);
+
         return User::create([
             'firstname' => $data['firstname'],
             'middlename' => $data['middlename'] ?? null,
@@ -96,6 +106,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'registration_code' => $code->registration_code_simple,
+            'expired_at' => $expiredAt,
         ]);
     }
 }

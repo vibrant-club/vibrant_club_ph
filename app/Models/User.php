@@ -34,6 +34,7 @@ class User extends Authenticatable
         'twitter',
         'youtube',
         'vibrant_username',
+        'expired_at',
     ];
 
     /**

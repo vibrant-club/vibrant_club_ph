@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\Rule;
 
 class ProfileController extends Controller
 {
@@ -14,6 +15,23 @@ class ProfileController extends Controller
     {
         /** @var \App\Models\User $user */
         $user = Auth::user();
+
+        // ✅ Add validation for vibrant_username uniqueness
+        $request->validate([
+            'vibrant_username' => [
+                'required',
+                'string',
+                'max:255',
+                Rule::unique('users')->ignore($user->id),
+            ],
+            'about' => 'nullable|string',
+            'facebook' => 'nullable|string',
+            'instagram' => 'nullable|string',
+            'tiktok' => 'nullable|string',
+            'twitter' => 'nullable|string',
+            'youtube' => 'nullable|string',
+            'profile_image' => 'nullable|image|max:2048',
+        ]);
 
         // Handle profile image upload
         if ($request->hasFile('profile_image')) {
