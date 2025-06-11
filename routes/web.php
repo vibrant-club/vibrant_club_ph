@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
@@ -16,6 +17,9 @@ Route::middleware('auth')->group(function () {
 
     Route::view('/my_profile', 'profile')->name('my_profile');
     Route::put('/profile_update', [ProfileController::class, 'update'])->name('profile.update');
+
+    Route::post('/campaigns', [CampaignController::class, 'store'])->name('campaigns.store');
+    Route::delete('/campaigns/{id}', [CampaignController::class, 'destroy'])->name('campaigns.destroy');
 });
 
 // Public profile by vibrant_username

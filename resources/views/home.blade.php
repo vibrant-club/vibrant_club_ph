@@ -36,8 +36,20 @@
         }
     </style>
 
+
+
     <div class="container-fluid p-4 border">
-        <h2 class="mb-4 fw-bold text-vibrant">📢 Available Campaigns</h2>
+
+        @if (session('success'))
+            <div class="alert alert-dismissible fade show text-white border-0" role="alert"
+                style="background-color: #ff0084;">
+                {{ session('success') }}
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
+
+        <h4 class="mb-4 fw-bold text-vibrant">📢 Available Campaigns</h4>
 
         <form method="GET" action="{{ route('home') }}" class="mb-4">
             <div class="input-group">
@@ -67,25 +79,28 @@
 
                             <ul class="list-unstyled text-secondary small mb-0">
                                 <li class="mb-2">
-                                    <i
-                                        class="fas fa-building me-2 text-vibrant"></i><strong>{{ $campaign->brand_name }}</strong>
+                                    &nbsp;<i class="fas fa-building me-2 text-vibrant"></i>&nbsp;&nbsp;Brand Name:
+                                    <strong>{{ $campaign->brand_name }}</strong>
                                 </li>
                                 <li class="mb-2">
-                                    <i
-                                        class="fas fa-wallet me-2 text-vibrant"></i>₱{{ number_format($campaign->budget, 2) }}
-                                    budget
+                                    <i class="fas fa-users me-2 text-vibrant"></i>&nbsp;Total Influencers Needed:
+                                    <strong> {{ $campaign->total_influencers_needed }} </strong>
                                 </li>
                                 <li class="mb-2">
-                                    <i class="fas fa-calendar-alt me-2 text-vibrant"></i>Deadline:
+                                    <i class="fas fa-wallet me-2 text-vibrant"></i>&nbsp;&nbsp;Budget Per Influencer:
+                                    <strong>
+                                        ₱ {{ number_format($campaign->budget, 2) }} </strong>
+
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-calendar-alt me-2 text-vibrant"></i>&nbsp;&nbsp;Deadline For
+                                    Submission:
                                     <strong>{{ \Carbon\Carbon::parse($campaign->deadline)->format('F d, Y') }}</strong>
                                 </li>
-                                <li class="mb-2">
-                                    <i class="fas fa-users me-2 text-vibrant"></i>Total Influencers:
-                                    {{ $campaign->total_influencers_needed }}
-                                </li>
+
                                 <li>
                                     <i
-                                        class="fas fa-circle me-2 {{ $campaign->status === 'active' ? 'text-success' : 'text-secondary' }}"></i>Status:
+                                        class="fas fa-circle me-2 {{ $campaign->status === 'active' ? 'text-success' : 'text-secondary' }}"></i>&nbsp;&nbsp;Status:
                                     <strong class="text-capitalize">{{ $campaign->status }}</strong>
                                 </li>
                             </ul>
@@ -93,7 +108,7 @@
 
                         {{-- 👇 Tags section inserted here --}}
                         @if (!empty($campaign->tags) && is_array(json_decode($campaign->tags, true)))
-                            <div class="px-4 pb-2">
+                            <div class="px-4 pb-1">
                                 <div class="d-flex flex-wrap gap-2">
                                     @foreach (json_decode($campaign->tags, true) as $tag)
                                         <span class="badge bg-vibrant text-white rounded-pill px-3 py-1">
@@ -104,14 +119,29 @@
                             </div>
                         @endif
 
+                        <hr>
+                        
+                        <div class="card-footer bg-transparent border-0 px-4 pb-3">
+                            <div class="d-flex gap-2 justify-content-center">
+                                <a href="{{ $campaign->form_link }}"
+                                    class="btn btn-sm btn-vibrant-outline rounded-pill px-4" target="_blank">
+                                    Enter Campaign
+                                </a>
 
-
-                        <div class="card-footer bg-transparent border-0 text-end px-4 pb-3">
-                            <a href="{{ $campaign->form_link }}" class="btn btn-sm btn-vibrant-outline rounded-pill px-4"
-                                target="_blank">
-                                View Details
-                            </a>
+                                @if (auth()->check() && auth()->user()->role === 1)
+                                    <form action="{{ route('campaigns.destroy', $campaign->id) }}" method="POST"
+                                        onsubmit="return confirm('Are you sure you want to delete this campaign?');">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-sm btn-outline-danger rounded-pill px-4">
+                                            <i class="bi bi-trash me-1"></i> Delete
+                                        </button>
+                                    </form>
+                                @endif
+                            </div>
                         </div>
+
+
                     </div>
 
                 </div>
@@ -141,7 +171,8 @@
                 </div>
 
                 <!-- Form -->
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('campaigns.store') }}" method="POST" enctype="multipart/form-data">
+
                     @csrf
                     <div class="modal-body px-4 pt-4 pb-2">
                         <div class="mb-3">
@@ -155,8 +186,8 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label fw-semibold">Description</label>
-                            <textarea class="form-control rounded-3" name="description" rows="4" required></textarea>
+                            <label class="form-label fw-semibold">Campaign Description</label>
+                            <textarea class="form-control rounded-3" name="description" rows="10" required></textarea>
                         </div>
 
                         <div class="row">
@@ -185,28 +216,30 @@
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Status</label>
                             <select class="form-select rounded-pill" name="status" required>
-                                <option value="draft">Active</option>
-                                <option value="active">Upcoming</option>
+                                <option value="active">Active</option>
+                                <option value="upcoming">Upcoming</option>
+                                <option value="completed">Completed</option>
+                                <option value="paused">Paused</option>
                             </select>
                         </div>
 
                         <div class="mb-3 text-start">
                             <label for="tag-input-new-campaign" class="form-label fw-semibold">Tags</label>
                             <input name="tags" id="tag-input-new-campaign" class="form-control"
-                                placeholder="Select or type tags..." >
+                                placeholder="Select or type tags...">
                         </div>
 
                     </div>
 
                     <!-- Footer -->
-                    <div class="modal-footer px-4 pb-4 pt-2">
-                        <button type="button" class="btn btn-outline-secondary rounded-pill px-4"
-                            data-bs-dismiss="modal">Cancel</button>
+                    <div class="modal-footer p-3 justify-content-center">
+
                         <button type="submit" class="btn text-white rounded-pill px-4"
                             style="background-color: #ff0084;">
                             <i class="bi bi-check-circle me-1"></i> Create Campaign
                         </button>
                     </div>
+
                 </form>
             </div>
         </div>
