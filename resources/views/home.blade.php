@@ -74,7 +74,7 @@
                             <h5 class="card-title fw-bold text-dark mb-2">{{ $campaign->title }}</h5>
 
                             <p class="text-muted mb-3">
-                                {{ $campaign->description }}
+                                {!! nl2br(e($campaign->description)) !!}
                             </p>
 
                             <ul class="list-unstyled text-secondary small mb-0">
@@ -120,7 +120,7 @@
                         @endif
 
                         <hr>
-                        
+
                         <div class="card-footer bg-transparent border-0 px-4 pb-3">
                             <div class="d-flex gap-2 justify-content-center">
                                 <a href="{{ $campaign->form_link }}"
@@ -204,7 +204,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label fw-semibold">Deadline</label>
+                            <label class="form-label fw-semibold">Deadline For Submission</label>
                             <input type="date" class="form-control rounded-pill" name="deadline" required>
                         </div>
 
