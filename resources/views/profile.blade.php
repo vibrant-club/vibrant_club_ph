@@ -22,8 +22,9 @@
                     </label>
 
                     <input type="file" id="profileImageInput" name="profile_image" accept="image/*" class="d-none"
-                        onchange="document.getElementById('profilePreview').src = window.URL.createObjectURL(this.files[0])">
+                        onchange="handleImagePreview(this)">
                 </div>
+
 
 
 
@@ -170,5 +171,25 @@
                 input.value = tagify.value.map(item => item.value).join(',');
             });
         });
+
+
+
+        // PROFILE PIC SIZE VALIDATION
+        function handleImagePreview(input) {
+            const file = input.files[0];
+            if (file) {
+                if (file.size > 10 * 1024 * 1024) { // 10MB
+                    alert("File is too large. Max 10MB allowed.");
+                    input.value = '';
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profilePreview').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
     </script>
 @endsection
