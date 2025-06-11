@@ -56,8 +56,7 @@
 
                                 </li>
                                 <li class="mb-2">
-                                    <i class="fas fa-calendar-alt me-2 text-vibrant"></i>&nbsp;&nbsp;Deadline For
-                                    Submission:
+                                    <i class="fas fa-calendar-alt me-2 text-vibrant"></i>&nbsp;&nbsp;Submission Deadline:
                                     <strong>{{ \Carbon\Carbon::parse($campaign->deadline)->format('F d, Y') }}</strong>
                                 </li>
 
