@@ -34,6 +34,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
 
 
+
+
     <style>
         /* app.blade.php */
         body {
@@ -158,18 +160,35 @@
                                         </a>
 
                                         <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('home') }}">
-                                            &nbsp; <i class="bi bi-caret-right"></i> Show All Campaigns
+                                            &nbsp; <i class="bi bi-list-stars"></i> Available Campaigns
                                         </a>
 
                                         @auth
-                                            @if (auth()->user()->role == 1)
+                                            @if (auth()->user()->role == 1 || auth()->user()->role == 12)
                                                 <a class="dropdown-item d-flex align-items-center gap-2" href="#"
                                                     data-bs-toggle="modal" data-bs-target="#addCampaignModal">
-                                                    &nbsp; <i class="bi bi-caret-right"></i> Add New Campaigns
+                                                    &nbsp; <i class="bi bi-plus-circle"></i> Create New Campaigns
                                                 </a>
                                             @endif
                                         @endauth
 
+                                        @auth
+                                            @if (auth()->user()->role == 1 || auth()->user()->role == 12)
+                                                <a class="dropdown-item d-flex align-items-center gap-2"
+                                                    href="{{ route('my_pending_campaigns') }}">
+                                                    &nbsp; <i class="bi bi-hourglass-bottom"> </i> My Created Campaigns
+                                                </a>
+                                            @endif
+                                        @endauth
+
+                                        @auth
+                                            @if (auth()->user()->role == 1)
+                                                <a class="dropdown-item d-flex align-items-center gap-2"
+                                                    href="{{ route('approve_campaigns') }}">
+                                                    &nbsp; <i class="bi bi-clipboard-check"></i> Campaign Approvals
+                                                </a>
+                                            @endif
+                                        @endauth
 
                                         {{-- <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('home') }}">
                                            &nbsp; <i class="bi bi-caret-right"></i>  Inactive Campaigns
@@ -207,6 +226,10 @@
         <main class="">
             @yield('content')
         </main>
+
+        <footer class="text-center py-4 mt-2 text-muted">
+            &copy; {{ date('Y') }} Vibrant Club PH. All rights reserved.
+        </footer>
     </div>
 </body>
 

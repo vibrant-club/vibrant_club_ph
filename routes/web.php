@@ -3,6 +3,7 @@
 use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -19,8 +20,23 @@ Route::middleware('auth')->group(function () {
     Route::put('/profile_update', [ProfileController::class, 'update'])->name('profile.update');
 
     Route::post('/campaigns', [CampaignController::class, 'store'])->name('campaigns.store');
-    Route::delete('/campaigns/{id}', [CampaignController::class, 'destroy'])->name('campaigns.destroy');
+    Route::get('/my_pending_campaigns', [CampaignController::class, 'showMyPendingCampaigns'])->name('my_pending_campaigns');
+
 });
+
+
+
+Route::middleware(['auth', AdminMiddleware::class])->group(function () {
+    Route::get('/approve_campaigns', [CampaignController::class, 'showPendingApproval'])->name('approve_campaigns');
+    Route::delete('/campaigns/{id}', [CampaignController::class, 'destroy'])->name('campaigns.destroy');
+    Route::patch('/campaigns/{id}/approve', [CampaignController::class, 'approve'])->name('campaigns.approve');
+    Route::patch('/campaigns/{id}/decline', [CampaignController::class, 'decline'])->name('campaigns.decline');
+});
+
+
+
+
+
 
 // Public profile by vibrant_username
 Route::get('/username/{vibrant_username}', [ProfileController::class, 'showPublicProfile'])->name('profile.public');

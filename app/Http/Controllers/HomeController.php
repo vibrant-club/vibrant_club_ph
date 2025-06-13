@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Campaign;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class HomeController extends Controller
 {
@@ -22,21 +23,21 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
     public function index(Request $request)
     {
-        // $campaigns = Campaign::all(); // or paginate() if needed
-
-        // $campaigns = Campaign::latest()->paginate(6); 
-        // return view('home', compact('campaigns'));
-
         $search = $request->input('search');
 
         $campaigns = Campaign::when($search, function ($query, $search) {
             return $query->where(function ($q) use ($search) {
                 $q->where('title', 'like', '%' . $search . '%')
-                    ->orWhere('tags', 'like', '%"' . $search . '"%'); // JSON match for exact tag
+                    ->orWhere('tags', 'like', '%"' . $search . '"%');
             });
-        })->latest()->paginate(6);
+        })
+            ->whereDate('deadline', '>=', Carbon::today()) // Only show future or today
+            ->where('is_approved', 1)                      // ✅ Only show approved campaigns
+            ->latest()
+            ->paginate(6);
 
         return view('home', compact('campaigns', 'search'));
     }
