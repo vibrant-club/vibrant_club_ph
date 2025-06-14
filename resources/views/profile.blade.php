@@ -22,7 +22,7 @@
                     </label>
 
                     <input type="file" id="profileImageInput" name="profile_image" accept="image/*" class="d-none"
-                        onchange="document.getElementById('profilePreview').src = window.URL.createObjectURL(this.files[0])">
+                        onchange="validateAndPreviewImage(this)">
                 </div>
 
 
@@ -136,6 +136,46 @@
 
 
             </div>
+
+
+
+            {{-- <div class="text-start p-3 fs-5 rounded shadow-sm">
+                <!-- 🔽 Vibrant Gems Daily Claim (Icon + Amount for All Days) -->
+                <div class="mb-4 text-center">
+                    <label class="fw-semibold d-block mb-2 text-vibrant fs-5">Daily Claim: Vibrant Gems <i class="fas fa-gem me-1"></i></label>
+
+                    <div class="d-flex justify-content-between flex-wrap gap-1">
+                        @php
+                            $dailyGems = [10, 12, 13, 14, 15, 16, 20];
+                        @endphp
+
+                        @for ($day = 1; $day <= 7; $day++)
+                            <div class="text-center border rounded-pill px-1 py-1"
+                                style="width: 13%; font-size: 0.65rem;
+                    @if ($day == 1) background-color: #ff0084; color: #fff; border: none;
+                    @else background-color: #f8f9fa; color: #6c757d; border-color: #dee2e6; @endif">
+
+                                <div class="fw-semibold">DAY {{ $day }}</div>
+
+                                <div class="my-1">
+                                    @if ($day == 1)
+                                        <i class="fas fa-gem me-1"></i>{{ $dailyGems[$day - 1] }}
+                                    @else
+                                        <i class="fas fa-lock me-1"></i>{{ $dailyGems[$day - 1] }}
+                                    @endif
+                                </div>
+
+                            </div>
+                        @endfor
+                    </div>
+                </div>
+            </div> --}}
+
+
+
+
+
+
         </form>
     </div>
 
@@ -174,5 +214,23 @@
                 input.value = tagify.value.map(item => item.value).join(',');
             });
         });
+
+
+        function validateAndPreviewImage(input) {
+            const file = input.files[0];
+
+            if (file) {
+                const maxSize = 2 * 1024 * 1024; // 2MB
+
+                if (file.size > maxSize) {
+                    alert('Profile picture file size must be 2MB or less.');
+                    input.value = ''; // Reset the file input
+                    return;
+                }
+
+                // Preview the image
+                document.getElementById('profilePreview').src = URL.createObjectURL(file);
+            }
+        }
     </script>
 @endsection

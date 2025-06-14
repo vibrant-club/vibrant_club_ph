@@ -48,15 +48,15 @@
                                     <strong>{{ $campaign->brand_name }}</strong>
                                 </li>
                                 <li class="mb-2">
-                                    <i class="fas fa-users me-2 text-vibrant"></i>&nbsp;Total Influencers Needed:
+                                    <i class="fas fa-users me-2 text-vibrant"></i>&nbsp;Needed Influencers:
                                     <strong>
-                                        {{ $campaign->total_influencers_needed !== null ? $campaign->total_influencers_needed : 'Not applicable' }}
+                                        {{ $campaign->total_influencers_needed !== null ? $campaign->total_influencers_needed : 'N/A' }}
                                     </strong>
                                 </li>
                                 <li class="mb-2">
-                                    <i class="fas fa-wallet me-2 text-vibrant"></i>&nbsp;&nbsp;Budget Per Influencer:
+                                    <i class="fas fa-wallet me-2 text-vibrant"></i>&nbsp;&nbsp;Rate Per Influencer:
                                     <strong>
-                                        {{ $campaign->budget !== null ? '₱ ' . number_format($campaign->budget, 2) : 'Not applicable' }}
+                                        {{ $campaign->budget !== null ? '₱ ' . number_format($campaign->budget, 2) : 'N/A' }}
                                     </strong>
                                 </li>
 

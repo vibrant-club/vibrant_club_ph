@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Campaign;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class CampaignController extends Controller
 {
@@ -24,7 +26,7 @@ class CampaignController extends Controller
         ]);
 
         $campaign = new Campaign();
-        $campaign->user_id = auth()->id(); // @intelephense-ignore-line
+        $campaign->user_id = Auth::id(); // Filter by the logged-in user's ID
         $campaign->title = $validated['title'];
         $campaign->brand_name = $validated['brand_name'];
         $campaign->description = $validated['description'];
@@ -77,7 +79,7 @@ class CampaignController extends Controller
         $filter = $request->input('filter', 'pending'); // default to 'pending'
 
         $query = Campaign::query()
-            ->where('user_id', auth()->id()) // Filter by the logged-in user's ID
+            ->where('user_id', Auth::id()) // Filter by the logged-in user's ID
             ->whereDate('deadline', '>=', Carbon::today())
             ->latest();
 
