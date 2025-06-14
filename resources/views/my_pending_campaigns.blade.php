@@ -47,13 +47,13 @@
                                     <strong>{{ $campaign->brand_name }}</strong>
                                 </li>
                                 <li class="mb-2">
-                                    <i class="fas fa-users me-2 text-vibrant"></i>&nbsp;Total Influencers Needed:
+                                    <i class="fas fa-users me-2 text-vibrant"></i>&nbsp;Needed Influencers:
                                     <strong>
                                         {{ $campaign->total_influencers_needed !== null ? $campaign->total_influencers_needed : 'Not applicable' }}
                                     </strong>
                                 </li>
                                 <li class="mb-2">
-                                    <i class="fas fa-wallet me-2 text-vibrant"></i>&nbsp;&nbsp;Budget Per Influencer:
+                                    <i class="fas fa-wallet me-2 text-vibrant"></i>&nbsp;&nbsp;Rate Per Influencer:
                                     <strong>
                                         {{ $campaign->budget !== null ? '₱ ' . number_format($campaign->budget, 2) : 'Not applicable' }}
                                     </strong>
@@ -63,8 +63,7 @@
                                     <strong>{{ \Carbon\Carbon::parse($campaign->deadline)->format('F d, Y') }}</strong>
                                 </li>
                                 <li>
-                                    <i
-                                        class="fas fa-circle me-2 {{ $campaign->status === 'active' ? 'text-success' : 'text-secondary' }}"></i>&nbsp;&nbsp;Status:
+                                    <i class="bi bi-patch-question me-2 text-vibrant"></i>&nbsp;&nbsp;Status:
                                     <strong class="text-capitalize">{{ $campaign->status }}</strong>
                                 </li>
                             </ul>
@@ -91,8 +90,9 @@
         </div>
 
         <div class="d-flex justify-content-center mt-4">
-            {{ $campaigns->links('vendor.pagination.simple-bootstrap-5') }}
+            {{ $campaigns->appends(['filter' => request('filter')])->links('vendor.pagination.simple-bootstrap-5') }}
         </div>
+
 
     </div>
 @endsection

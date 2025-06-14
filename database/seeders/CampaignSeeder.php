@@ -13,6 +13,7 @@ class CampaignSeeder extends Seeder
         DB::table('campaigns_tbl')->insert([
             [
                 'title' => '✨ Fresh Finds x Vibrant Club Launch Campaign',
+                'user_id' => '1',
                 'description' => 'We’re looking for trendy lifestyle influencers to promote our summer essentials kit on Instagram Stories and Reels.',
                 'brand_name' => 'Fresh Finds PH',
                 'budget' => 15000.00,
@@ -25,6 +26,7 @@ class CampaignSeeder extends Seeder
             ],
             [
                 'title' => '🎧 SoundVibe Headphones TikTok Challenge',
+                'user_id' => '1',
                 'description' => 'Join our TikTok dance challenge featuring SoundVibe’s latest noise-canceling headphones. Get creative and go viral!',
                 'brand_name' => 'SoundVibe',
                 'budget' => 20000.00,
@@ -37,6 +39,7 @@ class CampaignSeeder extends Seeder
             ],
             [
                 'title' => '🍔 Burger Beast Street Eats Promo',
+                'user_id' => '1',
                 'description' => 'Calling all foodies! Help us spread the word about our new street burger line with tasty Instagram content.',
                 'brand_name' => 'Burger Beast',
                 'budget' => 8000.00,
@@ -49,6 +52,7 @@ class CampaignSeeder extends Seeder
             ],
             [
                 'title' => '📦 Unbox With Us - Gadget Edition',
+                'user_id' => '1',
                 'description' => 'Tech influencers wanted for unboxing and reviewing budget-friendly gadgets for YouTube and TikTok.',
                 'brand_name' => 'GizmoGo',
                 'budget' => 12000.00,
@@ -61,6 +65,7 @@ class CampaignSeeder extends Seeder
             ],
             [
                 'title' => '💄 Slay With Clay: Skincare Video Series',
+                'user_id' => '1',
                 'description' => 'Promote our new clay mask collection with before-and-after reels on Instagram and TikTok.',
                 'brand_name' => 'DermaClay PH',
                 'budget' => 9500.00,
@@ -73,6 +78,7 @@ class CampaignSeeder extends Seeder
             ],
             [
                 'title' => '👟 Flex Your Fit - Sneaker Launch Campaign',
+                'user_id' => '1',
                 'description' => 'Athletic and fashion-forward influencers needed to promote our streetwear sneaker drop.',
                 'brand_name' => 'SwiftStep',
                 'budget' => 18000.00,
@@ -85,6 +91,7 @@ class CampaignSeeder extends Seeder
             ],
             [
                 'title' => '🎮 Mobile Legends All-Star Showdown',
+                'user_id' => '1',
                 'description' => 'Gaming influencers needed for a sponsored Mobile Legends tournament on Facebook Live and TikTok.',
                 'brand_name' => 'GameHub PH',
                 'budget' => 25000.00,

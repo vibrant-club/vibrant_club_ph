@@ -67,7 +67,7 @@
 
                                 <li>
                                     <i
-                                        class="fas fa-circle me-2 {{ $campaign->status === 'active' ? 'text-success' : 'text-secondary' }}"></i>&nbsp;&nbsp;Status:
+                                        class="bi bi-patch-question me-2 text-vibrant"></i>&nbsp;&nbsp;Status:
                                     <strong class="text-capitalize">{{ $campaign->status }}</strong>
                                 </li>
                             </ul>

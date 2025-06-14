@@ -33,7 +33,7 @@
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label fw-semibold">Budget per Influencer</label>
+                            <label class="form-label fw-semibold">Rate Per Influencer</label>
                             <div class="input-group">
                                 <input type="number" class="form-control rounded-pill" name="budget_per_influencer"
                                     min="0" step="0.01" id="budgetInput" required>
