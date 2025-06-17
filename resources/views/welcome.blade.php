@@ -418,7 +418,7 @@
                 <img src="{{ asset('images/18.JPG') }}" class="img-fluid rounded-circle mb-3"
                     style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
 
-                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Angela Bacerdo</h5>
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Janella Joy Tan</h5>
                 <p class="text-muted mb-3" style="font-size: 0.95rem;">Beauty/SkinCare</p>
 
                 <h5 class="mb-1" style="font-size: 1rem;">
