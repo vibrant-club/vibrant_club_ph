@@ -93,31 +93,31 @@
         <h2 class="section-title text-center mb-4">📸 Featured Creators</h2>
         <div class="row text-center">
             <div class="col-md-4 text-center py-3 border">
-                <img src="{{ asset('images/logo2.png') }}" class="img-fluid rounded-circle mb-3"
+                <img src="{{ asset('images/6.jpg') }}" class="img-fluid rounded-circle mb-3"
                     style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
 
-                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">VIBRANT CLUB PH</h5>
-                <p class="text-muted mb-3" style="font-size: 0.95rem;">Networking and Vlogging Company</p>
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Ma. Margarita Jimenez</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Beauty and Personal care</p>
 
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-tiktok me-2"></i>
-                    <a href="https://www.tiktok.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.tiktok.com/@itsmemmarg02" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        @itsmemmarg02
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-facebook me-2 text-primary"></i>
-                    <a href="https://www.facebook.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.facebook.com/@Itsmemarg02" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        @Itsmemarg02
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
-                    <a href="https://www.instagram.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.instagram.com/itsmemargjimenez" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        @itsmemargjimenez
                     </a>
                 </h5>
             </div>
