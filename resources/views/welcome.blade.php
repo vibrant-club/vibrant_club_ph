@@ -351,7 +351,7 @@
 
 
             <div class="col-md-4 text-center py-3 border">
-                <img src="{{ asset('images/15.jpg') }}" class="img-fluid rounded-circle mb-3"
+                <img src="{{ asset('images/15.JPG') }}" class="img-fluid rounded-circle mb-3"
                     style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
 
                 <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Frances Louisse Fronda</h5>
@@ -376,6 +376,36 @@
                     <a href="https://www.instagram.com/fraancessa" target="_blank"
                         style="text-decoration: none; color: inherit;">
                         fraancessa
+                    </a>
+                </h5>
+            </div>
+
+            <div class="col-md-4 text-center py-3 border">
+                <img src="{{ asset('images/20.JPG') }}" class="img-fluid rounded-circle mb-3"
+                    style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
+
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Angela Bacerdo</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Skin care, Food anf Lifestyle</p>
+
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-tiktok me-2"></i>
+                    <a href="https://www.tiktok.com/@gel0003.ugc" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        @gel0003.ugc
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-facebook me-2 text-primary"></i>
+                    <a href="https://www.facebook.com/ugcGela " target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        ugcGela 
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
+                    <a href="https://www.instagram.com/gel0003.ugc" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        gel0003.ugc
                     </a>
                 </h5>
             </div>
