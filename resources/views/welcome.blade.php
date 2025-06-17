@@ -40,13 +40,28 @@
 </head>
 
 <body>
-    <div class="hero">
+    <div class="hero text-center">
         {{-- <img src="{{ asset('images/logo3.png') }}" alt="Vibrant Club PH Logo" class="mb-3"> --}}
         <h1 class="display-5 fw-bold">Welcome to Vibrant Club PH</h1>
-        <p class="lead">Where influencers rise, connect, and thrive.</p>
-        <a href="{{ route('login') }}" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Login Account</a>
+        <p class="lead">"Where influencers rise, connect, and thrive."</p>
+
+        <p class="fs-6 text-muted mx-auto mt-2" style="max-width: 700px;">
+            <strong>Vibrant Club PH</strong> is a Marketing Agency that focuses on connecting brands with influencers,
+            content creators, and digital talents across the Philippines.
+            <br><br>
+            We specialize in influencer-driven marketing, helping businesses amplify their campaigns through authentic
+            creator collaborations. Whether it's launching a product, promoting an event, or boosting brand awareness —
+            we build bridges between creative talents and brands that want to make an impact.
+            <br><br>
+            At the same time, Vibrant Club PH supports creators by giving them access to campaigns, exposure
+            opportunities, and a platform to showcase their influence.
+        </p>
+
+        <a href="{{ route('login') }}" class="btn btn-light rounded-pill px-4 py-2 fw-semibold mt-3">Login Account</a>
         {{-- <a href="{{ route('register') }}" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Register Account</a> --}}
     </div>
+
+
 
     <div class="container mt-4">
         <h2 class="section-title text-center mb-4">📢 Announcements</h2>
