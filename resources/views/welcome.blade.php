@@ -53,7 +53,7 @@
         <div class="row mb-4">
             <div class="col-md-12">
                 <div class="card announcement-card shadow-sm p-4">
-                    <h5 class="mb-3 text-danger">🚨 EXCLUSIVE OPPORTUNITY 🚨</h5>
+                    <h5 class="mb-3 text-danger">🚨 EXCLUSIVE OPPORTUNITY</h5>
                     <h5 class="mb-3">✨ Be a Pioneer + System Tester for Vibrant Club PH ✨</h5>
                     <p>
                         We’re looking for <strong>Early adopters</strong> to join our exclusive opportunity and
