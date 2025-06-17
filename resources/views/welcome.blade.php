@@ -444,6 +444,35 @@
                 </h5>
             </div>
 
+            <div class="col-md-4 text-center py-3 border">
+                <img src="{{ asset('images/1.jpg') }}" class="img-fluid rounded-circle mb-3"
+                    style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
+
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Mary Grace Pojo</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Beauty, Reviews, Tech</p>
+
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-tiktok me-2"></i>
+                    <a href="https://www.tiktok.com/@viella_ugc" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        @viella_ugc
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-facebook me-2 text-primary"></i>
+                    <a href="https://www.facebook.com/grace.dy.21" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        @grace.dy.21
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
+                    <a href="https://www.instagram.com/rhae_vielle" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        rhae_vielle
+                    </a>
+                </h5>
+            </div>
 
             {{-- <div class="col-md-4 border">
                 <img src="{{ asset('images/logo3.png') }}" class="rounded-circle img-fluid mb-2">
