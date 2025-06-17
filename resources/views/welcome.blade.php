@@ -337,9 +337,9 @@
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-facebook me-2 text-primary"></i>
-                    <a href="https://www.facebook.com/Maringal Ito " target="_blank"
+                    <a href="https://www.facebook.com/maringal.ito " target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        Maringal Ito
+                        maringal.ito
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
