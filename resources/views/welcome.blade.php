@@ -172,7 +172,8 @@
                     style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
 
                 <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Cyrille Jane Galindo</h5>
-                <p class="text-muted mb-3" style="font-size: 0.95rem;">Motherhood, Lifstyle, Food, Beauty, Events and some UGC works</p>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Motherhood, Lifstyle, Food, Beauty, Events and
+                    some UGC works</p>
 
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-tiktok me-2"></i>
@@ -202,7 +203,9 @@
                     style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
 
                 <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Ma. Jenel Armeña</h5>
-                <p class="text-muted mb-3" style="font-size: 0.95rem;">I usually create contents centered on beauty, specifically skincare, but I also create videos regarding fashion, lifestyle/wellness, and tech for brand collaborations. My style is a mix of aesthetic videos (i.e., perfume content),</p>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">I usually create contents centered on beauty,
+                    specifically skincare, but I also create videos regarding fashion, lifestyle/wellness, and tech for
+                    brand collaborations. My style is a mix of aesthetic videos (i.e., perfume content),</p>
 
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-tiktok me-2"></i>
@@ -305,7 +308,7 @@
                     <i class="fab fa-facebook me-2 text-primary"></i>
                     <a href="https://www.facebook.com/ZiaLosBaños " target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        ZiaLosBaños 
+                        ZiaLosBaños
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
@@ -336,7 +339,7 @@
                     <i class="fab fa-facebook me-2 text-primary"></i>
                     <a href="https://www.facebook.com/Maringal Ito " target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        Maringal Ito 
+                        Maringal Ito
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
@@ -368,7 +371,7 @@
                     <i class="fab fa-facebook me-2 text-primary"></i>
                     <a href="https://www.facebook.com/franceslouisse " target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        franceslouisse 
+                        franceslouisse
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
@@ -398,7 +401,7 @@
                     <i class="fab fa-facebook me-2 text-primary"></i>
                     <a href="https://www.facebook.com/ugcGela " target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        ugcGela 
+                        ugcGela
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
@@ -406,6 +409,37 @@
                     <a href="https://www.instagram.com/gel0003.ugc" target="_blank"
                         style="text-decoration: none; color: inherit;">
                         gel0003.ugc
+                    </a>
+                </h5>
+            </div>
+
+
+            <div class="col-md-4 text-center py-3 border">
+                <img src="{{ asset('images/18.JPG') }}" class="img-fluid rounded-circle mb-3"
+                    style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
+
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Angela Bacerdo</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Beauty/SkinCare</p>
+
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-tiktok me-2"></i>
+                    <a href="https://www.tiktok.com/@t.aphrodite" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        @t.aphrodite
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-facebook me-2 text-primary"></i>
+                    <a href="https://www.facebook.com/JanellaTan " target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        JanellaTan
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
+                    <a href="https://www.instagram.com/tan.latinaa" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        tan.latinaa
                     </a>
                 </h5>
             </div>
