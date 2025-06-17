@@ -53,39 +53,42 @@
         <div class="row mb-4">
             <div class="col-md-12">
                 <div class="card announcement-card shadow-sm p-4">
-                    <h5 class="mb-3">Get FREE Access to Vibrant Club PH – Starting June 15! ✨</h5>
+                    <h5 class="mb-3 text-danger">🚨 EXCLUSIVE OPPORTUNITY 🚨</h5>
+                    <h5 class="mb-3">✨ Be a Pioneer + System Tester for Vibrant Club PH ✨</h5>
                     <p>
-                        We’re excited to celebrate a major milestone — the growth of <strong>Vibrant Club PH</strong>
-                        has been incredible, thanks to the amazing energy of the Filipino influencer community. As a
-                        heartfelt <em>thank you</em>, we’re opening our doors in a big way.
+                        We’re looking for <strong>Early adopters</strong> to join our exclusive opportunity and
+                        become part of our inner circle 💫
+                    </p>
+                    <p>As a <strong>Pioneer Member & System Tester</strong>, you'll get:</p>
+                    <ul>
+                        <li>✅ Lifetime access to the platform</li>
+                        <li>✅ Sharable Influencer Profile to showcase your personal brand anywhere</li>
+                        <li>✅ Early access to all upcoming features and campaigns</li>
+                        <li>✅ Exclusive badge on your profile after a month</li>
+                        <li>✅ Chance to be featured on our socials</li>
+                        <li>✅ Lifetime perks for active contributors</li>
+                    </ul>
+                    <p>
+                        💡 <strong>Help us shape the future of influencer collaboration in the Philippines.</strong><br>
+                        We’re building this community <em>with you, for you</em>.
                     </p>
                     <p>
-                        Starting <strong>June 15</strong>, we’re offering <strong>FREE exclusive access</strong> to the
-                        first <strong>100 Filipino influencers</strong>. This is your opportunity to be part of
-                        something exciting — and it all starts by joining our waitlist.
-                    </p>
-                    <p>
-                        Please note that this is a waitlist. Signing up does not guarantee access. Selected influencers
-                        will be notified via email with the next steps.
-                    </p>
-                    <p>
-                        Be part of a vibrant space built for creators — where collaboration is encouraged, creativity
-                        shines, and your influence can grow like never before.
-                    </p>
-                    <p>
-                        🌟 Don’t miss your chance to help shape the future of influencer culture in the Philippines.
-                    </p>
-                    <p>
-                        <strong>Sign up. Watch your inbox. Shine with Vibrant Club PH.</strong>
-                    </p>
-                    <p class="mb-0">
+                        📩 Fill up the application form now:
                         👉 <a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSegNX6ly7_34fGNcgb5upPZAPwaMxzd79ZBoagr9poGd7FfVQ/viewform?usp=dialog"
-                            target="_blank"><strong>Click here to join the waitlist</strong></a>
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSfXdwHiEm2JUMQe2picIo368hXgdPqLllMAhGg8Cga_VH5tgg/viewform"
+                            target="_blank">
+                            <strong>Click here to apply</strong>
+                        </a>
+                    </p>
+                    <p class="mb-0 text-danger fw-bold">⏳ Limited slots only. First come, first served!</p>
+                    <p class="mt-3 mb-0">
+                        <small>#VibrantClubPH #XDeal #PioneerInfluencer #SystemTester #InfluencerPH #CollabPH
+                            #DigitalCreatorCommunity</small>
                     </p>
                 </div>
             </div>
         </div>
+
 
         <h2 class="section-title text-center mb-4">📸 Featured Creators</h2>
         <div class="row text-center">
