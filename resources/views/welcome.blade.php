@@ -138,151 +138,244 @@
             </div>
 
             <div class="col-md-4 text-center py-3 border">
-                <img src="{{ asset('images/logo2.png') }}" class="img-fluid rounded-circle mb-3"
+                <img src="{{ asset('images/4.jpg') }}" class="img-fluid rounded-circle mb-3"
                     style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
 
-                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">VIBRANT CLUB PH</h5>
-                <p class="text-muted mb-3" style="font-size: 0.95rem;">Networking and Vlogging Company</p>
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Zaila Mariz Sanchez</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Beauty, Skin Care and Fashion </p>
 
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-tiktok me-2"></i>
-                    <a href="https://www.tiktok.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.tiktok.com/@zaillalas_" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        @zaillalas_
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-facebook me-2 text-primary"></i>
-                    <a href="https://www.facebook.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.facebook.com/zaillala" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        @zaillala
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
-                    <a href="https://www.instagram.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.instagram.com/zai_ugc" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        @zai_ugc
                     </a>
                 </h5>
             </div>
 
             <div class="col-md-4 text-center py-3 border">
-                <img src="{{ asset('images/logo2.png') }}" class="img-fluid rounded-circle mb-3"
+                <img src="{{ asset('images/5.jpg') }}" class="img-fluid rounded-circle mb-3"
                     style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
 
-                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">VIBRANT CLUB PH</h5>
-                <p class="text-muted mb-3" style="font-size: 0.95rem;">Networking and Vlogging Company</p>
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Cyrille Jane Galindo</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Motherhood, Lifstyle, Food, Beauty, Events and some UGC works</p>
 
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-tiktok me-2"></i>
-                    <a href="https://www.tiktok.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.tiktok.com/@galindofamily_24" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        @galindofamily_24
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-facebook me-2 text-primary"></i>
-                    <a href="https://www.facebook.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.facebook.com/elliryccj24" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        @elliryccj24
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
-                    <a href="https://www.instagram.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.instagram.com/elliryccj" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        @elliryccj
                     </a>
                 </h5>
             </div>
 
             <div class="col-md-4 text-center py-3 border">
-                <img src="{{ asset('images/logo2.png') }}" class="img-fluid rounded-circle mb-3"
+                <img src="{{ asset('images/7.png') }}" class="img-fluid rounded-circle mb-3"
                     style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
 
-                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">VIBRANT CLUB PH</h5>
-                <p class="text-muted mb-3" style="font-size: 0.95rem;">Networking and Vlogging Company</p>
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Ma. Jenel Armeña</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">I usually create contents centered on beauty, specifically skincare, but I also create videos regarding fashion, lifestyle/wellness, and tech for brand collaborations. My style is a mix of aesthetic videos (i.e., perfume content),</p>
 
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-tiktok me-2"></i>
-                    <a href="https://www.tiktok.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.tiktok.com/@a.riaugc" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        @a.riaugc
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-facebook me-2 text-primary"></i>
-                    <a href="https://www.facebook.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.facebook.com/@MJArmeña" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        @MJArmeña
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
-                    <a href="https://www.instagram.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.instagram.com/a.riaugc" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        a.riaugc
                     </a>
                 </h5>
             </div>
 
             <div class="col-md-4 text-center py-3 border">
-                <img src="{{ asset('images/logo2.png') }}" class="img-fluid rounded-circle mb-3"
+                <img src="{{ asset('images/8.jpeg') }}" class="img-fluid rounded-circle mb-3"
                     style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
 
-                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">VIBRANT CLUB PH</h5>
-                <p class="text-muted mb-3" style="font-size: 0.95rem;">Networking and Vlogging Company</p>
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Lira Joy Caguillo</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Beauty, Electronics, Lifestyle, Mixed</p>
 
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-tiktok me-2"></i>
-                    <a href="https://www.tiktok.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.tiktok.com/@lai.villarama" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        @lai.villarama
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-facebook me-2 text-primary"></i>
-                    <a href="https://www.facebook.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.facebook.com/liravillarama" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        liravillarama
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
-                    <a href="https://www.instagram.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.instagram.com/laivillarama" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        laivillarama
                     </a>
                 </h5>
             </div>
 
             <div class="col-md-4 text-center py-3 border">
-                <img src="{{ asset('images/logo2.png') }}" class="img-fluid rounded-circle mb-3"
+                <img src="{{ asset('images/9.jpeg') }}" class="img-fluid rounded-circle mb-3"
                     style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
 
-                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">VIBRANT CLUB PH</h5>
-                <p class="text-muted mb-3" style="font-size: 0.95rem;">Networking and Vlogging Company</p>
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Jeuel Daenne Mission</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Travel, Lifestyle, Beauty</p>
 
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-tiktok me-2"></i>
-                    <a href="https://www.tiktok.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.tiktok.com/@daenneee" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        @daenneee
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-facebook me-2 text-primary"></i>
-                    <a href="https://www.facebook.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.facebook.com/DaenneMission" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        DaenneMission
                     </a>
                 </h5>
                 <h5 class="mb-1" style="font-size: 1rem;">
                     <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
-                    <a href="https://www.instagram.com/vibrant.club.ph" target="_blank"
+                    <a href="https://www.instagram.com/missiondaenne" target="_blank"
                         style="text-decoration: none; color: inherit;">
-                        vibrant.club.ph
+                        missiondaenne
+                    </a>
+                </h5>
+            </div>
+
+            <div class="col-md-4 text-center py-3 border">
+                <img src="{{ asset('images/12.jpg') }}" class="img-fluid rounded-circle mb-3"
+                    style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
+
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Zia Los Baños</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Fashion, Beauty, Wellness/Lifestyle </p>
+
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-tiktok me-2"></i>
+                    <a href="https://www.tiktok.com/@_ziaangelovesu" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        @_ziaangelovesu
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-facebook me-2 text-primary"></i>
+                    <a href="https://www.facebook.com/ZiaLosBaños " target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        ZiaLosBaños 
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
+                    <a href="https://www.instagram.com/_ziaangela" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        _ziaangela
+                    </a>
+                </h5>
+            </div>
+
+
+            <div class="col-md-4 text-center py-3 border">
+                <img src="{{ asset('images/14.JPG') }}" class="img-fluid rounded-circle mb-3"
+                    style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
+
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Maringal Ito</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Breastfeeding, Parenting, Mom & Baby</p>
+
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-tiktok me-2"></i>
+                    <a href="https://www.tiktok.com/@maringal.ito" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        @maringal.ito
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-facebook me-2 text-primary"></i>
+                    <a href="https://www.facebook.com/Maringal Ito " target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        Maringal Ito 
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
+                    <a href="https://www.instagram.com/maringal.ito" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        maringal.ito
+                    </a>
+                </h5>
+            </div>
+
+
+
+            <div class="col-md-4 text-center py-3 border">
+                <img src="{{ asset('images/15.jpg') }}" class="img-fluid rounded-circle mb-3"
+                    style="max-width: 200px; aspect-ratio: 1 / 1; object-fit: cover;" alt="Vibrant Club Profile">
+
+                <h5 class="fw-bold mb-1" style="font-size: 1.1rem;">Frances Louisse Fronda</h5>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">Lifestyle, Beauty, Mommy</p>
+
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-tiktok me-2"></i>
+                    <a href="https://www.tiktok.com/@lifewithfrancessa" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        @lifewithfrancessa
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-facebook me-2 text-primary"></i>
+                    <a href="https://www.facebook.com/franceslouisse " target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        franceslouisse 
+                    </a>
+                </h5>
+                <h5 class="mb-1" style="font-size: 1rem;">
+                    <i class="fab fa-instagram me-2" style="color: #C13584;"></i>
+                    <a href="https://www.instagram.com/fraancessa" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        fraancessa
                     </a>
                 </h5>
             </div>
