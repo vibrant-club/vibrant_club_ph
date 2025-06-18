@@ -18,10 +18,14 @@
                     alt="Profile Image">
             </div>
 
-            <div class="lh-1">
-                <span class="fs-3 fw-bold">{{ $user->firstname }} {{ $user->middlename }} {{ $user->lastname }}</span><br>
-                <span class="text-muted">{{ $user->email }}</span>
+            <div class="lh-1" style="word-break: break-word; overflow-wrap: anywhere;">
+                <span class="fs-3 fw-bold d-block">{{ $user->firstname }} {{ $user->middlename }}
+                    {{ $user->lastname }}</span>
+                <span class="text-muted d-block" style="word-break: break-word; overflow-wrap: anywhere;">
+                    {{ $user->email }}
+                </span>
             </div>
+
 
             @if ($user->about)
                 <div class="mt-3 lh-sm">
