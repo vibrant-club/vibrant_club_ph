@@ -30,8 +30,8 @@ class HomeController extends Controller
 
         $campaigns = Campaign::when($search, function ($query, $search) {
             return $query->where(function ($q) use ($search) {
-                $q->where('title', 'like', '%' . $search . '%')
-                    ->orWhere('tags', 'like', '%"' . $search . '"%');
+                $q->whereRaw('LOWER(title) LIKE ?', ['%' . strtolower($search) . '%'])
+                    ->orwhereRaw('LOWER(tags) LIKE ?', ['%' . strtolower($search) . '%']);
             });
         })
             ->whereDate('deadline', '>=', Carbon::today()) // Only show future or today
