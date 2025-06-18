@@ -72,8 +72,6 @@
                         <select class="form-select rounded-pill" name="status" required>
                             <option value="active">Active</option>
                             <option value="upcoming">Upcoming</option>
-                            <option value="completed">Completed</option>
-                            <option value="paused">Paused</option>
                         </select>
                     </div>
 
