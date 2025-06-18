@@ -26,12 +26,12 @@
                 </div>
 
 
-
-                <div class="lh-sm">
+                <div class="lh-sm" style="max-width: 100%; word-wrap: break-word;">
                     <span class="fs-3 fw-bold">{{ Auth::user()->firstname }} {{ Auth::user()->middlename }}
                         {{ Auth::user()->lastname }}</span> <br>
-                    <span class="fs-5">{{ Auth::user()->email }}</span>
+                    <span class="fs-5 text-break">{{ Auth::user()->email }}</span>
                 </div>
+
 
                 <div class="mt-3 mb-2">
                     <label class="fw-semibold d-block mb-1">Introduction</label>
