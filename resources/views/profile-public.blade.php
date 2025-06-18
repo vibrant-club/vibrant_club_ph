@@ -21,7 +21,7 @@
             <div class="lh-1" style="word-break: break-word; overflow-wrap: anywhere;">
                 <span class="fs-3 fw-bold d-block">{{ $user->firstname }} {{ $user->middlename }}
                     {{ $user->lastname }}</span>
-                <span class="fs-5 text-muted d-block" style="word-break: break-word; overflow-wrap: anywhere;">
+                <span class="fs-6 text-muted d-block" style="word-break: break-word; overflow-wrap: anywhere;">
                     {{ $user->email }}
                 </span>
             </div>
