@@ -12,7 +12,7 @@
             </div>
             <div class="modal-body px-4 py-3">
                 <div class="border rounded p-2 bg-light-subtle">
-                    <p class="text-muted mb-0" style="white-space: pre-line;">
+                    <p class="text-muted mb-0">
                         {!! nl2br(e($campaign->description)) !!}
                     </p>
                 </div>
