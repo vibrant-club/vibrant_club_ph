@@ -12,10 +12,11 @@
             </div>
             <div class="modal-body px-4 py-3">
                 <div class="border rounded p-2 bg-light-subtle">
-                    <p class="text-muted mb-0">
+                    <p class="text-muted mb-0" style="word-break: break-word; overflow-wrap: break-word;">
                         {!! nl2br(e($campaign->description)) !!}
                     </p>
                 </div>
+
             </div>
             <div class="modal-footer border-0 px-4 pb-4 justify-content-center">
                 <a href="{{ $campaign->form_link }}" target="_blank" class="btn btn-vibrant-outline rounded-pill px-4">
