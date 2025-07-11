@@ -69,7 +69,7 @@
                                 </li>
 
                                 <li class="mb-2">
-                                    <i class="bi bi-calendar-event me-2 text-vibrant"></i>Submission Deadline:
+                                    <i class="bi bi-calendar-event me-2 text-vibrant"></i>Submission Until:
                                     <strong>{{ \Carbon\Carbon::parse($campaign->deadline)->format('F d, Y') }}</strong>
                                 </li>
 
