@@ -34,7 +34,10 @@
 
                     <div class="card card-glass h-100">
                         <div class="card-body px-4 py-4">
-                            <h5 class="card-title fw-bold text-dark mb-3">{{ $campaign->title }}</h5>
+                            <h5 class="card-title fw-bold text-dark mb-3" style="font-family: 'Times New Roman', serif;">
+                                {{ $campaign->title }}
+                            </h5>
+
                             {{-- <p class="fs-6  card-title fw-bold text-dark mb-2"> <ins> Campaign No.
                                     {{ $campaign->id }}</ins></p> --}}
 
