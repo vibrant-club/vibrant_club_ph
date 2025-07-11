@@ -16,7 +16,7 @@
 
         <form method="GET" action="{{ route('home') }}" class="mb-4">
             <div class="input-group">
-                <input type="text" name="search" class="form-control" placeholder="Search campaigns..."
+                <input type="text" name="search" class="form-control" placeholder="Search Title, Tags, Etc.."
                     value="{{ request('search') }}">
 
                 <button type="submit" class="btn btn-vibrant-outline">Search</button>
@@ -29,45 +29,52 @@
 
 
         <div class="row">
-            @foreach ($campaigns as $campaign)
+            @forelse ($campaigns as $campaign)
                 <div class="col-md-6 col-lg-4 mb-4">
 
                     <div class="card card-glass h-100">
                         <div class="card-body px-4 py-4">
-                            <h5 class="card-title fw-bold text-dark mb-2">{{ $campaign->title }}</h5>
-                            <p class="fs-6  card-title fw-bold text-dark mb-2"> <ins> Campaign No.
-                                    {{ $campaign->id }}</ins></p>
+                            <h5 class="card-title fw-bold text-dark mb-3">{{ $campaign->title }}</h5>
+                            {{-- <p class="fs-6  card-title fw-bold text-dark mb-2"> <ins> Campaign No.
+                                    {{ $campaign->id }}</ins></p> --}}
 
-                            <p class="text-muted mb-3 mt-3">
+                            {{-- <p class="text-muted mb-3 mt-3">
                                 {!! nl2br(e($campaign->description)) !!}
-                            </p>
+                            </p> --}}
 
                             <ul class="list-unstyled text-secondary small mb-0">
+
                                 <li class="mb-2">
-                                    &nbsp;<i class="fas fa-building me-2 text-vibrant"></i>&nbsp;&nbsp;Brand Name:
+                                    <i class="bi bi-list-ol me-2 text-vibrant"></i>Campaign No.
+                                    <strong class="text-capitalize">{{ $campaign->id }}</strong>
+                                </li>
+
+                                <li class="mb-2">
+                                    <i class="bi bi-buildings-fill me-2 text-vibrant"></i>Brand Name:
                                     <strong>{{ $campaign->brand_name }}</strong>
                                 </li>
+
                                 <li class="mb-2">
-                                    <i class="fas fa-users me-2 text-vibrant"></i>&nbsp;Needed Influencers:
+                                    <i class="bi bi-person-video2 me-2 text-vibrant"></i>Needed Influencers:
                                     <strong>
                                         {{ $campaign->total_influencers_needed !== null ? $campaign->total_influencers_needed : 'N/A' }}
                                     </strong>
                                 </li>
+
                                 <li class="mb-2">
-                                    <i class="fas fa-wallet me-2 text-vibrant"></i>&nbsp;&nbsp;Rate Per Influencer:
+                                    <i class="bi bi-cash-coin me-2 text-vibrant"></i>Rate Per Influencer:
                                     <strong>
                                         {{ $campaign->budget !== null ? '₱ ' . number_format($campaign->budget, 2) : 'N/A' }}
                                     </strong>
                                 </li>
 
                                 <li class="mb-2">
-                                    <i class="fas fa-calendar-alt me-2 text-vibrant"></i>&nbsp;&nbsp;Submission Deadline:
+                                    <i class="bi bi-calendar-event me-2 text-vibrant"></i>Submission Deadline:
                                     <strong>{{ \Carbon\Carbon::parse($campaign->deadline)->format('F d, Y') }}</strong>
                                 </li>
 
-                                <li>
-                                    <i
-                                        class="bi bi-patch-question me-2 text-vibrant"></i>&nbsp;&nbsp;Status:
+                                <li class="">
+                                    <i class="bi bi-patch-question me-2 text-vibrant"></i>Status:
                                     <strong class="text-capitalize">{{ $campaign->status }}</strong>
                                 </li>
                             </ul>
@@ -96,10 +103,16 @@
 
                         <div class="card-footer bg-transparent border-0 px-4 pb-3">
                             <div class="d-flex gap-2 justify-content-center">
-                                <a href="{{ $campaign->form_link }}"
+                                {{-- Modal Trigger --}}
+                                <button class="btn btn-sm btn-vibrant-outline rounded-pill px-4" data-bs-toggle="modal"
+                                    data-bs-target="#campaignModal{{ $campaign->id }}">
+                                    View Details
+                                </button>
+
+                                {{-- <a href="{{ $campaign->form_link }}"
                                     class="btn btn-sm btn-vibrant-outline rounded-pill px-4" target="_blank">
                                     Enter Campaign
-                                </a>
+                                </a> --}}
 
                                 @if (auth()->check() && auth()->user()->role === 1)
                                     <form action="{{ route('campaigns.destroy', $campaign->id) }}" method="POST"
@@ -119,7 +132,17 @@
                     </div>
 
                 </div>
-            @endforeach
+
+                {{-- Include the campaign modal --}}
+                @include('modals.view_campaign_details', ['campaign' => $campaign])
+
+
+
+            @empty
+                <div class="text-center text-muted py-5">
+                    No campaigns found.
+                </div>
+            @endforelse
         </div>
 
         <div class="d-flex justify-content-center mt-4">
@@ -128,4 +151,8 @@
 
 
     </div>
+
+
+
+
 @endsection
