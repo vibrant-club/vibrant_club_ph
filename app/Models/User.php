@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Auth\Notifications\ResetPassword;
+use App\Notifications\ResetPasswordBrevo;
+use App\Notifications\ResetPasswordResend;
 
 class User extends Authenticatable
 {
@@ -62,11 +64,14 @@ class User extends Authenticatable
 
     public function sendPasswordResetNotification($token)
     {
-        $this->notify(new ResetPasswordNotificationCustom($token));
+        // $this->notify(new ResetPasswordNotificationCustom($token));
+        //  $this->notify(new ResetPasswordBrevo($token));
+        $this->notify(new ResetPasswordResend($token));
     }
 
     public function tags()
     {
         return $this->belongsToMany(Tag::class, 'tag_user_tbl');
     }
+
 }
