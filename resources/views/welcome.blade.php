@@ -49,7 +49,7 @@
     <div class="hero text-center">
         {{-- <img src="{{ asset('images/logo3.png') }}" alt="Vibrant Club PH Logo" class="mb-3"> --}}
         <h1 class="display-5 fw-bold">Vibrant Club PH</h1>
-        <p class="lead">"Where influencers rise, connect, and thrive."</p>
+        <p class="lead">"Where Influencers Rise, Connect, and Succeed."</p>
 
         <p class="fs-6 text-muted mx-auto mt-2" style="max-width: 700px;">
             <strong>Vibrant Club PH</strong> is a Marketing Agency that focuses on connecting brands with influencers,
