@@ -48,7 +48,7 @@
 <body>
     <div class="hero text-center">
         {{-- <img src="{{ asset('images/logo3.png') }}" alt="Vibrant Club PH Logo" class="mb-3"> --}}
-        <h1 class="display-5 fw-bold">Welcome to Vibrant Club PH</h1>
+        <h1 class="display-5 fw-bold">Vibrant Club PH</h1>
         <p class="lead">"Where influencers rise, connect, and thrive."</p>
 
         <p class="fs-6 text-muted mx-auto mt-2" style="max-width: 700px;">
@@ -64,7 +64,7 @@
         </p>
 
         <hr>
-        
+
         <div class="d-flex justify-content-center gap-2 mt-3 fs-6">
             <a href="{{ route('login') }}" class="btn btn-light btn-sm rounded-pill px-4 py-2 fw-semibold">Login
                 </a>
