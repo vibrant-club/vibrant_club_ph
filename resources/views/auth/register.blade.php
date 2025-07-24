@@ -9,7 +9,7 @@
                     <div class="card-header text-white text-center rounded-top-4 py-3 fs-2 fw-semibold"
                         style="background-color: #ff0084;">
                         Join our influencer network today!
-                        <div class="fs-4 fw-normal mt-1" style="line-height: 1.2;">
+                        <div class="fs-6 fw-normal mt-1" style="line-height: 1.2;">
                             Collaborate and grow your network with exclusive campaign opportunities and community perks.
                         </div>
                     </div>
@@ -20,8 +20,8 @@
 
                         {{-- <img src="{{ asset('images/logo2.png') }}" alt="Your Logo" class="img-fluid" style="height: 200px; width: auto;"> --}}
 
-                        <img src="{{ asset('images/logo3.png') }}" alt="Your Logo" class="img-fluid"
-                            style="height: 350px; width: 350px;">
+                        <img src="{{ asset('images/logo2.png') }}" alt="Your Logo" class="img-fluid"
+                            style="height: 300px; width: auto;">
 
                         {{-- <img src="{{ asset('images/logo.png') }}" alt="Your Logo" class="img-fluid" style="max-height: 200px;"> --}}
                     </div>
@@ -95,11 +95,23 @@
                             </div>
 
                             {{-- Registration Code --}}
-                            <div class="mb-4">
+                            {{-- OLD CODE FOR INPUTTING REGISTRAION CODE --}}
+                            {{-- <div class="mb-4">
                                 <label for="registration_code_simple" class="form-label">Registration Code</label>
                                 <input id="registration_code_simple" type="text"
                                     class="form-control rounded-pill @error('registration_code_simple') is-invalid @enderror"
                                     name="registration_code_simple" value="{{ old('registration_code_simple') }}" required>
+                                @error('registration_code_simple')
+                                    <div class="invalid-feedback d-block">{{ $message }}</div>
+                                @enderror
+                            </div> --}}
+
+                            <div class="mb-4">
+                                <label for="registration_code_simple" class="form-label">Registration Code</label>
+                                <input id="registration_code_simple" type="text"
+                                    class="form-control rounded-pill @error('registration_code_simple') is-invalid @enderror"
+                                    name="registration_code_display" value="FREE-ACCESS" disabled>
+                                <input type="hidden" name="registration_code_simple" value="FREE-ACCESS">
                                 @error('registration_code_simple')
                                     <div class="invalid-feedback d-block">{{ $message }}</div>
                                 @enderror

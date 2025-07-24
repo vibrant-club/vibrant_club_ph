@@ -10,15 +10,15 @@
                     <div class="card-header text-white text-center rounded-top-4 py-3 fs-2 fw-semibold"
                         style="background-color: #ff0084;">
                         You're Almost There
-                        <div class="fs-4 fw-normal mt-1" style="line-height: 1.2;">
+                        <div class="fs-6 fw-normal mt-1" style="line-height: 1.2;">
                             Sign in to access exclusive campaigns and community perks.
                         </div>
                     </div>
 
                     {{-- Logo --}}
                     <div class="text-center">
-                        <img src="{{ asset('images/logo3.png') }}" alt="Your Logo" class="img-fluid"
-                            style="height: 350px; width: auto;">
+                        <img src="{{ asset('images/logo2.png') }}" alt="Your Logo" class="img-fluid"
+                            style="height: 300px; width: auto;">
                     </div>
 
                     {{-- Body --}}
@@ -65,14 +65,25 @@
                                 </button>
                             </div>
 
+                            <hr>
+
+                            <div class="d-grid mb-3">
+                                <a href="{{ route('register') }}" class="btn rounded-pill py-2 fs-5 text-white"
+                                    style="background-color: #ff0084; border: none;">
+                                    {{ __('Register') }}
+                                </a>
+                            </div>
+
+
+
                             {{-- Forgot Password --}}
-                            @if (Route::has('password.request'))
+                            {{-- @if (Route::has('password.request'))
                                 <div class="text-center mb-3 fs-6">
                                     <a class="text-decoration-none" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 </div>
-                            @endif 
+                            @endif --}}
 
                         </form>
                     </div>

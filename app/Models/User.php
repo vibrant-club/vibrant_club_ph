@@ -37,6 +37,7 @@ class User extends Authenticatable
         'youtube',
         'vibrant_username',
         'expired_at',
+        'role',
     ];
 
     /**
@@ -64,16 +65,15 @@ class User extends Authenticatable
 
     public function sendPasswordResetNotification($token)
     {
-          $this->notify(new \App\Notifications\ResetPasswordNotificationCustom($token));
+        $this->notify(new \App\Notifications\ResetPasswordNotificationCustom($token));
         // $this->notify(new ResetPasswordNotificationCustom($token));
         //  $this->notify(new ResetPasswordBrevo($token));
         // $this->notify(new ResetPasswordResend($token));
-        
+
     }
 
     public function tags()
     {
         return $this->belongsToMany(Tag::class, 'tag_user_tbl');
     }
-
 }
