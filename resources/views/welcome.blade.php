@@ -63,8 +63,15 @@
             opportunities, and a platform to showcase their influence.
         </p>
 
-        <a href="{{ route('login') }}" class="btn btn-light btn-sm rounded-pill px-4 py-2 fw-semibold mt-3">Login Account</a>
-        <a href="{{ route('register') }}" class="btn btn-light btn-sm rounded-pill px-4 py-2 fw-semibold mt-3">Register Account</a>
+        <hr>
+        
+        <div class="d-flex justify-content-center gap-2 mt-3 fs-6">
+            <a href="{{ route('login') }}" class="btn btn-light btn-sm rounded-pill px-4 py-2 fw-semibold">Login
+                </a>
+            <a href="{{ route('register') }}" class="btn btn-light btn-sm rounded-pill px-4 py-2 fw-semibold">Register
+                </a>
+        </div>
+
     </div>
 
 
