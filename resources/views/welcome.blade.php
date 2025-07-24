@@ -24,7 +24,7 @@
         .hero {
             background-color: #ff0084;
             color: white;
-            padding: 4rem 2rem;
+            padding: 2rem 2rem;
             border-radius: 0 0 40px 40px;
             text-align: center;
         }
