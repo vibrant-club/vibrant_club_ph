@@ -63,8 +63,8 @@
             opportunities, and a platform to showcase their influence.
         </p>
 
-        <a href="{{ route('login') }}" class="btn btn-light rounded-pill px-4 py-2 fw-semibold mt-3">Login Account</a>
-        {{-- <a href="{{ route('register') }}" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Register Account</a> --}}
+        <a href="{{ route('login') }}" class="btn btn-light btn-sm rounded-pill px-4 py-2 fw-semibold mt-3">Login Account</a>
+        <a href="{{ route('register') }}" class="btn btn-light btn-sm rounded-pill px-4 py-2 fw-semibold mt-3">Register Account</a>
     </div>
 
 
@@ -74,28 +74,28 @@
         <div class="row mb-4">
             <div class="col-md-12">
                 <div class="card announcement-card shadow-sm p-4">
-                    <h5 class="mb-3 text-danger">🎥✨ Vibrant Club PH: Your Collab Hub ✨🎥</h5>
+                    <h5 class="mb-3 text-danger fw-bold">Vibrant Club PH: Your Collab Hub </h5>
 
-                    <p>🎙️ <strong>Influencer ka ba</strong> na naghahanap ng <em>paid gigs, X-deals, o collabs</em>
+                    <p><strong>Influencer ka ba</strong> na naghahanap ng <em>paid collabs or x-deals </em>
                         online?</p>
-                    <p><strong>O brand/marketer ka ba</strong> na naghahanap ng perfect match na influencer?</p>
+                    <p><strong>Or brand/marketer ka ba</strong> na naghahanap ng perfect match na influencer?</p>
 
-                    <p>📱💼 <strong>LOOK NO FURTHER!</strong> Welcome to <strong>Vibrant Club PH</strong> — ang
+                    <p><strong>LOOK NO FURTHER!</strong> Welcome to <strong>Vibrant Club PH</strong> — ang
                         all-in-one platform para sa influencers at brands na gustong mag-collaborate and grow together!
                     </p>
 
-                    <ul class="mb-2">
-                        <li>✔️ Makakakita ka ng active campaigns</li>
-                        <li>✔️ Pwede kang makipag-Xdeal</li>
-                        <li>✔️ Sumali sa mga brand collabs</li>
+                    <ul class="mb-3">
+                        <li>Makakakita ka ng active campaigns</li>
+                        <li>Pwede kang makipag-Xdeal</li>
+                        <li>Sumali sa mga brand collabs</li>
                     </ul>
 
-                    <p>👩‍💼 At kung marketer ka, madali mong maipopost ang iyong campaign para makita agad ng tamang
+                    <p>At kung marketer ka, madali mong maipopost ang iyong campaign para makita agad ng tamang
                         creators!</p>
 
-                    <p>🚀 <strong>LIMITED EARLY ACCESS OFFER</strong><br>
+                    <p><strong>LIMITED EARLY ACCESS OFFER</strong><br>
                         Kaya huwag magpahuli — <strong><a href="https://vibrant-club.com/register" target="_blank">SIGN
-                                UP NA sa Vibrant Club Platform today!</a></strong>
+                                UP NA sa Vibrant Club Platform today! </a></strong>
                     </p>
 
                     <p class="mt-3 mb-0">
