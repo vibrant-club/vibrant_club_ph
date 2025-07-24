@@ -65,8 +65,6 @@
                                 </button>
                             </div>
 
-                            <hr>
-
                             <div class="d-grid mb-3">
                                 <a href="{{ route('register') }}" class="btn rounded-pill py-2 fs-5 text-white"
                                     style="background-color: #ff0084; border: none;">
