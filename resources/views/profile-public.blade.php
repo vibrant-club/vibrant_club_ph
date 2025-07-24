@@ -4,10 +4,10 @@
     <div class="container p-3 bg-white">
 
         <!-- Header Banner -->
-        <div class="text-center py-4"
+        <div class="text-center py-2"
             style=" background: linear-gradient(135deg, #ff0084, #e489b8);  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
             <h1 class="text-white mt-2 mb-0 fw-bold" style="font-size: 1.5rem;">VIBRANT CLUB PH</h1>
-            <p class="text-white-50 mb-0 fs-5">Public Influencer Profile</p>
+            <p class="text-white-50 mb-0 fs-6">Public Influencer Profile</p>
         </div>
 
 
