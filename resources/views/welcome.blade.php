@@ -74,41 +74,37 @@
         <div class="row mb-4">
             <div class="col-md-12">
                 <div class="card announcement-card shadow-sm p-4">
-                    <h5 class="mb-3 text-danger">🚨 EXCLUSIVE OPPORTUNITY</h5>
-                    <h5 class="mb-3">✨ Be a Pioneer + System Tester for Vibrant Club PH ✨</h5>
-                    <p>
-                        We’re looking for <strong>Early adopters</strong> to join our exclusive opportunity and
-                        become part of our inner circle 💫
+                    <h5 class="mb-3 text-danger">🎥✨ Vibrant Club PH: Your Collab Hub ✨🎥</h5>
+
+                    <p>🎙️ <strong>Influencer ka ba</strong> na naghahanap ng <em>paid gigs, X-deals, o collabs</em>
+                        online?</p>
+                    <p><strong>O brand/marketer ka ba</strong> na naghahanap ng perfect match na influencer?</p>
+
+                    <p>📱💼 <strong>LOOK NO FURTHER!</strong> Welcome to <strong>Vibrant Club PH</strong> — ang
+                        all-in-one platform para sa influencers at brands na gustong mag-collaborate and grow together!
                     </p>
-                    <p>As a <strong>Pioneer Member & System Tester</strong>, you'll get:</p>
-                    <ul>
-                        <li>✅ Lifetime access to the platform</li>
-                        <li>✅ Sharable Influencer Profile to showcase your personal brand anywhere</li>
-                        <li>✅ Early access to all upcoming features and campaigns</li>
-                        <li>✅ Exclusive badge on your profile after a month</li>
-                        <li>✅ Chance to be featured on our socials</li>
-                        <li>✅ Lifetime perks for active contributors</li>
+
+                    <ul class="mb-2">
+                        <li>✔️ Makakakita ka ng active campaigns</li>
+                        <li>✔️ Pwede kang makipag-Xdeal</li>
+                        <li>✔️ Sumali sa mga brand collabs</li>
                     </ul>
-                    <p>
-                        💡 <strong>Help us shape the future of influencer collaboration in the Philippines.</strong><br>
-                        We’re building this community <em>with you, for you</em>.
+
+                    <p>👩‍💼 At kung marketer ka, madali mong maipopost ang iyong campaign para makita agad ng tamang
+                        creators!</p>
+
+                    <p>🚀 <strong>LIMITED EARLY ACCESS OFFER</strong><br>
+                        Kaya huwag magpahuli — <strong><a href="https://vibrant-club.com/register" target="_blank">SIGN
+                                UP NA sa Vibrant Club Platform today!</a></strong>
                     </p>
-                    <p>
-                        📩 Fill up the application form now:
-                        👉 <a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSfXdwHiEm2JUMQe2picIo368hXgdPqLllMAhGg8Cga_VH5tgg/viewform"
-                            target="_blank">
-                            <strong>Click here to apply</strong>
-                        </a>
-                    </p>
-                    <p class="mb-0 text-danger fw-bold">⏳ Limited slots only. First come, first served!</p>
+
                     <p class="mt-3 mb-0">
-                        <small>#VibrantClubPH #XDeal #PioneerInfluencer #SystemTester #InfluencerPH #CollabPH
-                            #DigitalCreatorCommunity</small>
+                        <small>#VibrantClubPH #XDeal #InfluencerPH #CollabPH #DigitalCreatorCommunity</small>
                     </p>
                 </div>
             </div>
         </div>
+
 
 
         <h2 class="section-title text-center mb-4">📸 Featured Creators</h2>

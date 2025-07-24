@@ -3,6 +3,7 @@
 namespace App\Notifications;
 
 use Illuminate\Notifications\Notification;
+use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Support\Facades\Http;
 
 class ResetPasswordResend extends Notification
@@ -44,8 +45,9 @@ class ResetPasswordResend extends Notification
             logger()->error('Resend email failed: ' . $response->body());
         }
 
-        // Laravel still expects this to return a MailMessage, even if unused
-        return (new \Illuminate\Notifications\Messages\MailMessage)
-            ->line('A password reset link has been sent to your email if it exists.');
+        // Return dummy MailMessage to satisfy Laravel
+        return (new MailMessage)
+            ->subject('Password Reset Link Sent')
+            ->line('If your email exists in our system, a password reset link has been sent.');
     }
 }
