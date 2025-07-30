@@ -108,7 +108,7 @@
             whitelist: predefinedTags,
             dropdown: {
                 enabled: 0, // show suggestions on focus
-                maxItems: 20,
+                maxItems: 50,
                 classname: "tags-look",
                 closeOnSelect: false
             }
