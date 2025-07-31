@@ -4,7 +4,7 @@ namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
-use Illuminate\Notifications\Messages\MailMessage;
+use App\Services\SendGridService;
 
 class ResetPasswordNotificationCustom extends Notification
 {
@@ -12,27 +12,39 @@ class ResetPasswordNotificationCustom extends Notification
 
     public $token;
 
+    protected $sendGrid;
+
     public function __construct($token)
     {
         $this->token = $token;
+        $this->sendGrid = new SendGridService();
     }
 
     public function via(object $notifiable): array
     {
-        return ['mail'];
+        return ['sendgrid'];
     }
 
-    public function toMail($notifiable)
+    public function toSendgrid($notifiable)
     {
         $resetUrl = url(route('password.reset', [
             'token' => $this->token,
             'email' => $notifiable->getEmailForPasswordReset(),
         ], false));
 
-        return (new MailMessage)
-            ->subject('Your Custom Password Reset')
-            ->line('You requested a password reset.')
-            ->action('Reset Password', $resetUrl)
-            ->line('If you did not request this, no further action is required.');
+        $email = $notifiable->email;
+
+        $subject = 'Your Custom Password Reset';
+        $content = <<<HTML
+<p>You requested a password reset.</p>
+<p><a href="{$resetUrl}" style="background-color:#1a73e8;color:white;padding:10px 20px;text-decoration:none;border-radius:5px;">Reset Password</a></p>
+<p>If you did not request this, no further action is required.</p>
+HTML;
+
+        $this->sendGrid->sendEmail(
+            $email,
+            $subject,
+            $content
+        );
     }
 }
