@@ -12,7 +12,7 @@ class ResetPasswordNotificationCustom extends Notification
 
     public $token;
 
-    protected $sendGrid;
+    protected $sendGrid; 
 
     public function __construct($token)
     {
