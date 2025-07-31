@@ -20,6 +20,7 @@
                         <p class="text-muted mb-4">
                             Forgot your password? Enter your email address below and we’ll send you a link to reset it.
                             <br>
+                            <br>
                             <span class="fw-bold text-danger">Note: Please check in the spam message</span>
                         </p>
 
