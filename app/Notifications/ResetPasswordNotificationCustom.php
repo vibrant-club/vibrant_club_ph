@@ -22,7 +22,7 @@ class ResetPasswordNotificationCustom extends Notification
 
     public function via(object $notifiable): array
     {
-        return ['sendgrid'];
+        return ['mail'];
     }
 
     public function toSendgrid($notifiable)
@@ -46,5 +46,7 @@ HTML;
             $subject,
             $content
         );
+
+        
     }
 }
