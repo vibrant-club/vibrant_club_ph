@@ -8,10 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 
-Route::get('/daily-quote', function () {
-    $response = Http::get('https://zenquotes.io/api/today');
-    return response()->json($response->json());
-}); 
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,6 +17,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::middleware('auth')->group(function () {
+    Route::get('/daily-quote', function () {
+        $response = Http::get('https://zenquotes.io/api/today');
+        return response()->json($response->json());
+    });
+
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/new_campaigns', [HomeController::class, 'new_campaigns'])->name('new_campaigns');
 
