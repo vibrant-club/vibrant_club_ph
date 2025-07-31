@@ -11,21 +11,20 @@ class SendGridService
 
     public function __construct()
     {
+        // Manually pass API key from config
         $this->sendgrid = new SendGrid(config('services.sendgrid.api_key'));
     }
 
-    public function sendEmail($to, $subject, $htmlContent, $buttonText = null, $buttonUrl = null)
+    public function sendEmail($to, $subject, $htmlContent)
     {
         $email = new Mail();
-        $email->setFrom("vibrant.club.ph@gmail.com", "Vibrant Club PH");
+        $email->setFrom("no-reply@yourdomain.com", "Your App Name");
         $email->setSubject($subject);
         $email->addTo($to);
-
         $email->addContent("text/html", $htmlContent);
 
         try {
-            $response = $this->sendgrid->send($email);
-            return $response;
+            return $this->sendgrid->send($email);
         } catch (\Exception $e) {
             logger()->error('SendGrid Error: ' . $e->getMessage());
             return false;
