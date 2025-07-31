@@ -11,6 +11,7 @@
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.6",
         "resend/resend-laravel": "^0.19.0",
+        "s-ichikawa/laravel-sendgrid-driver": "^4.0",
         "sendgrid/sendgrid": "*",
         "sendinblue/api-v3-sdk": "^8.4"
     },
