@@ -14,6 +14,8 @@ return [
     |
     */
 
+    'driver' => env('MAIL_DRIVER', 'sendgrid'),
+
     'default' => env('MAIL_MAILER', 'log'),
 
     /*
@@ -35,6 +37,10 @@ return [
     */
 
     'mailers' => [
+        
+        'sendgrid' => [
+            'transport' => 'sendgrid',
+        ],
 
         'smtp' => [
             'transport' => 'smtp',
