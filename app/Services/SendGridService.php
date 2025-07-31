@@ -17,7 +17,7 @@ class SendGridService
     public function sendEmail($to, $subject, $htmlContent, $buttonText = null, $buttonUrl = null)
     {
         $email = new Mail();
-        $email->setFrom("no-reply@yourdomain.com", "Your App Name");
+        $email->setFrom("vibrant.club.ph@gmail.com", "Vibrant Club PH");
         $email->setSubject($subject);
         $email->addTo($to);
 
