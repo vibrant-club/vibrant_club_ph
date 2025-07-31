@@ -29,7 +29,7 @@ class ResetPasswordSendGrid extends Notification
         return (new MailMessage)
             ->from('vibrant.club.ph@gmail.com', 'VIBRANT CLUB PH')
             ->subject('Let’s Get You Back In – Password Reset')
-            ->greeting('HI VIBRANT: , ' . $this->formatFullName($notifiable))
+            ->greeting('HI VIBRANT: ' . $this->formatFullName($notifiable))
             ->line('It looks like you requested a password reset. No problem—we’re here to help! Just click the button below to set a new password and get back in the groove.')
             ->action('Reset Your Password', $url)
             ->line('Didn’t make this request? No worries. You can safely ignore this email.')
