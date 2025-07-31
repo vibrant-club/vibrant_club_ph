@@ -165,6 +165,10 @@
                                             &nbsp; <i class="bi bi-list-stars"></i> Available Campaigns
                                         </a>
 
+                                        <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('new_campaigns') }}">
+                                            &nbsp; <i class="bi bi-bookmark-heart"></i> Newest Campaigns
+                                        </a>
+
                                         @auth
                                             @if (auth()->user()->role == 1 || auth()->user()->role == 12)
                                                 <a class="dropdown-item d-flex align-items-center gap-2" href="#"

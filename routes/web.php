@@ -22,6 +22,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/campaigns', [CampaignController::class, 'store'])->name('campaigns.store');
     Route::get('/my_pending_campaigns', [CampaignController::class, 'showMyPendingCampaigns'])->name('my_pending_campaigns');
 
+    Route::get('/new_campaigns', [HomeController::class, 'new_campaigns'])->name('new_campaigns');
+
+
 });
 
 
