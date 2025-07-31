@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Http;
 Route::get('/daily-quote', function () {
     $response = Http::get('https://zenquotes.io/api/today');
     return response()->json($response->json());
-});
+}); 
 
 Route::get('/', function () {
     return view('welcome');
