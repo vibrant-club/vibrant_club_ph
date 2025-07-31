@@ -21,13 +21,21 @@ class ResetPasswordSendGrid extends Notification
 
     public function toMail($notifiable)
     {
-        $url = url(route('password.reset', ['token' => $this->token, 'email' => $notifiable->getEmailForPasswordReset()], false));
+        $url = url(route('password.reset', [
+            'token' => $this->token,
+            'email' => $notifiable->getEmailForPasswordReset(),
+        ], false));
 
         return (new MailMessage)
             ->from('vibrant.club.ph@gmail.com', 'VIBRANT CLUB PH')
-            ->subject('Reset Your Password')
-            ->line('You requested a password reset.')
-            ->action('Reset Password', $url)
-            ->line('If you didn\'t request this, no action is needed.');
+            ->subject('Let’s Get You Back In – Password Reset')
+            ->greeting('Hi there,')
+            ->line('It looks like you requested a password reset. No problem—we’re here to help!')
+            ->line('Just click the button below to set a new password and get back in the groove.')
+            ->action('Reset Your Password', $url)
+            ->line('Didn’t make this request? No worries. You can safely ignore this email.')
+            ->line("At Vibrant Club PH, we're all about empowering creators and go-getters like you.")
+            ->line('*Where Influencers Rise, Connect, and Succeed.*')
+            ->salutation("See you back soon,\nVIBRANT CLUB PH 💫");
     }
 }
