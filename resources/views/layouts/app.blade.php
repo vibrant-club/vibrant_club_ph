@@ -166,7 +166,7 @@
                                         </a>
 
                                         <a class="dropdown-item d-flex align-items-center gap-2" href="{{ route('new_campaigns') }}">
-                                            &nbsp; <i class="bi bi-bookmark-heart"></i> Newest Campaigns
+                                            &nbsp; <i class="bi bi-bookmark-heart"></i> Today's Newest Campaign.
                                         </a>
 
                                         @auth
