@@ -41,7 +41,7 @@
                                 @enderror
                             </div>
 
-                            <div class="mt-4 text-end">
+                            <div class="mt-4 text-center">
                                 <button type="submit" class="btn text-white px-4 py-2 rounded-pill"
                                     style="background-color: #FF0084; border: none;">
                                     {{ __('Send Password Reset Link') }}
