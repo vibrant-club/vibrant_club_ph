@@ -29,12 +29,36 @@ class ResetPasswordSendGrid extends Notification
         return (new MailMessage)
             ->from('vibrant.club.ph@gmail.com', 'VIBRANT CLUB PH')
             ->subject('Let’s Get You Back In – Password Reset')
-            ->greeting('Hi there,')
+            ->greeting('HI VIBRANT: , ' . $this->formatFullName($notifiable))
             ->line('It looks like you requested a password reset. No problem—we’re here to help! Just click the button below to set a new password and get back in the groove.')
             ->action('Reset Your Password', $url)
             ->line('Didn’t make this request? No worries. You can safely ignore this email.')
             ->line("At Vibrant Club PH, we're all about empowering creators and go-getters like you.")
             ->line('*Where Influencers Rise, Connect, and Succeed.*')
             ->salutation("See you back soon,\nVIBRANT CLUB PH 💫");
+    }
+
+    private function formatFullName($user)
+    {
+        $parts = [];
+
+        if (!empty($user->firstname)) {
+            $parts[] = $user->firstname;
+        }
+
+        if (!empty($user->middlename)) {
+            $parts[] = $user->middlename;
+        }
+
+        if (!empty($user->lastname)) {
+            $parts[] = $user->lastname;
+        }
+
+        // Fallback if all names are missing
+        if (empty($parts)) {
+            return 'Valued User';
+        }
+
+        return implode(' ', $parts);
     }
 }
