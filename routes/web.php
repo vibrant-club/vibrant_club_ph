@@ -6,6 +6,12 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Http;
+
+Route::get('/daily-quote', function () {
+    $response = Http::get('https://zenquotes.io/api/today');
+    return response()->json($response->json());
+});
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,16 +21,13 @@ Auth::routes();
 
 Route::middleware('auth')->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/new_campaigns', [HomeController::class, 'new_campaigns'])->name('new_campaigns');
 
     Route::view('/my_profile', 'profile')->name('my_profile');
     Route::put('/profile_update', [ProfileController::class, 'update'])->name('profile.update');
 
     Route::post('/campaigns', [CampaignController::class, 'store'])->name('campaigns.store');
     Route::get('/my_pending_campaigns', [CampaignController::class, 'showMyPendingCampaigns'])->name('my_pending_campaigns');
-
-    Route::get('/new_campaigns', [HomeController::class, 'new_campaigns'])->name('new_campaigns');
-
-
 });
 
 
