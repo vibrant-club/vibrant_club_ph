@@ -76,6 +76,17 @@
                                 @enderror
                             </div>
 
+                            {{-- Contact Number --}}
+                            <div class="mb-2">
+                                <label for="contact_number" class="form-label">{{ __('Contact Number') }}</label>
+                                <input id="contact_number" type="text"
+                                    class="form-control rounded-pill @error('contact_number') is-invalid @enderror"
+                                    name="contact_number" value="{{ old('contact_number') }}" required>
+                                @error('contact_number')
+                                    <div class="invalid-feedback d-block">{{ $message }}</div>
+                                @enderror
+                            </div>
+
                             {{-- Password --}}
                             <div class="mb-2">
                                 <label for="password" class="form-label">{{ __('Password') }}</label>

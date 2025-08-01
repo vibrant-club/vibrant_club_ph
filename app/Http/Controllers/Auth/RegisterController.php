@@ -58,6 +58,7 @@ class RegisterController extends Controller
     //         'middlename' => ['nullable', 'string', 'max:255'],
     //         'lastname' => ['required', 'string', 'max:255'],
     //         'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            // 'contact_number' => ['required', 'string', 'max:20'],
     //         'password' => ['required', 'string', 'min:8', 'confirmed'],
     //         'registration_code_simple' => [
     //             'required',
@@ -84,6 +85,7 @@ class RegisterController extends Controller
             'middlename' => ['nullable', 'string', 'max:255'],
             'lastname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'contact_number' => ['required', 'string', 'max:20'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'registration_code_simple' => [
                 'required',
@@ -140,6 +142,7 @@ class RegisterController extends Controller
     //         'middlename' => $data['middlename'] ?? null,
     //         'lastname' => $data['lastname'],
     //         'email' => $data['email'],
+            // 'contact_number' => $data['contact_number'],
     //         'password' => Hash::make($data['password']),
     //         'registration_code' => $code->registration_code_simple,
     //         'expired_at' => $expiredAt,
@@ -176,6 +179,7 @@ class RegisterController extends Controller
             'middlename' => $data['middlename'] ?? null,
             'lastname' => $data['lastname'],
             'email' => $data['email'],
+            'contact_number' => $data['contact_number'],
             'password' => Hash::make($data['password']),
             'registration_code' => $finalCode,
             'expired_at' => $expiredAt,

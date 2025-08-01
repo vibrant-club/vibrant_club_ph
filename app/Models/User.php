@@ -38,6 +38,7 @@ class User extends Authenticatable
         'vibrant_username',
         'expired_at',
         'role',
+        'contact_number',
     ];
 
     /**

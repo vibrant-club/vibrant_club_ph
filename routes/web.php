@@ -17,6 +17,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::middleware('auth')->group(function () {
+    
     Route::get('/daily-quote', function () {
         $response = Http::get('https://zenquotes.io/api/today');
         return response()->json($response->json());
