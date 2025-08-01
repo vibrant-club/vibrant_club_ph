@@ -128,6 +128,7 @@
     @include('modals.add_new_campaign')
     @auth
         @include('modals.daily_announcement')
+        @include('modals.daily_favor')
     @endauth
 
     <div id="app">
