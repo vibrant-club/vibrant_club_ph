@@ -46,8 +46,8 @@
     <!-- Tagify JS -->
     <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
 
-
-
+    {{-- favicon --}}
+    <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
 
     <style>
         /* app.blade.php */

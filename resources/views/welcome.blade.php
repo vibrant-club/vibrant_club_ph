@@ -15,6 +15,9 @@
     <meta property="og:image" content="https://vibrant-club.com/images/logo3.png">
     <meta property="og:type" content="website">
 
+    {{-- favicon --}}
+    <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
+    
     <style>
         body {
             font-family: 'Nunito', sans-serif;
@@ -65,9 +68,9 @@
 
         <div class="d-flex justify-content-center gap-2 mt-3 fs-6">
             <a href="{{ route('login') }}" class="btn btn-light btn-sm rounded-pill px-4 py-2 fw-semibold">Login
-                </a>
+            </a>
             <a href="{{ route('register') }}" class="btn btn-light btn-sm rounded-pill px-4 py-2 fw-semibold">Register
-                </a>
+            </a>
         </div>
 
     </div>
