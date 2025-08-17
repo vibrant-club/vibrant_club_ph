@@ -16,7 +16,7 @@ class RegistrationCodeSeeder extends Seeder
     {
         $data = [];
 
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 10000; $i++) {
             $uuid = Str::uuid();
             $simpleCode = strtoupper(Str::random(4)) . '-' . rand(1000, 9999); // e.g. XTZP-4821
 
