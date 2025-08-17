@@ -35,7 +35,7 @@
                         <li>📱 Join our Viber Community:
                             <a href="https://invite.viber.com/?g=pPD0ABfM2VRqzNArqa7xK2v7zdOcS4nR" target="_blank"
                                 class="fw-bold text-decoration-none text-warning">
-                                invite.viber.com
+                                invite.viber.com/?g=pPD0ABfM2VRqzNArqa7xK2v7zdOcS4nR
                             </a>
                         </li>
                         <br>
