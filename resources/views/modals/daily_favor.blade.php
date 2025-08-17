@@ -36,7 +36,7 @@
                     <p class="mt-3 text-muted mb-0">
                         Your support helps us reach more amazing people like you! ✨
                     </p>
-                </div>
+                </div> 
             </div>
             <div class="modal-footer border-0 px-4 pb-4 justify-content-center">
                 <button type="button" class="btn btn-vibrant-outline rounded-pill px-4" data-bs-dismiss="modal">
