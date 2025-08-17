@@ -17,7 +17,7 @@
 
     {{-- favicon --}}
     <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
-    
+
     <style>
         body {
             font-family: 'Nunito', sans-serif;
@@ -82,34 +82,40 @@
         <div class="row mb-4">
             <div class="col-md-12">
                 <div class="card announcement-card shadow-sm p-4">
-                    <h5 class="mb-3 text-danger fw-bold">Vibrant Club PH: Your Collab Hub </h5>
+                    <h5 class="mb-3 text-danger fw-bold">Vibrant Club PH: Your Collab Hub</h5>
 
-                    <p><strong>Influencer ka ba</strong> na naghahanap ng <em>paid collabs or x-deals </em>
-                        online?</p>
-                    <p><strong>Or brand/marketer ka ba</strong> na naghahanap ng perfect match na influencer?</p>
+                    <p>Gusto mo bang kumita bilang <strong>Influencer</strong> or <strong>UGC Creator</strong>? 🧐</p>
 
-                    <p><strong>LOOK NO FURTHER!</strong> Welcome to <strong>Vibrant Club PH</strong> — ang
-                        all-in-one platform para sa influencers at brands na gustong mag-collaborate and grow together!
-                    </p>
+                    <p>Naghahanap ka ba ng mga <em>paid collabs, campaigns</em> o <em>x-deals</em>?</p>
+
+                    <p>Mag-register na sa <strong>Vibrant Club PH</strong> kung saan makakahanap ka ng iba’t ibang brand
+                        campaigns, collabs, at xdeals na pwedeng salihan — at heto pa ang mga perks na naghihintay
+                        sa’yo:</p>
 
                     <ul class="mb-3">
-                        <li>Makakakita ka ng active campaigns</li>
-                        <li>Pwede kang makipag-Xdeal</li>
-                        <li>Sumali sa mga brand collabs</li>
+                        <li>✅ Find Campaigns and Xdeals and Earn Money</li>
+                        <li>✅ Shareable Influencer Profile Anywhere</li>
+                        <li>✅ Join Vibrant Club Community Group Chats</li>
+                        <li>✅ Networking Opportunity</li>
+                        <li>✅ Chance to Be Featured and Boost Your Socials</li>
                     </ul>
 
-                    <p>At kung marketer ka, madali mong maipopost ang iyong campaign para makita agad ng tamang
-                        creators!</p>
+                    <p>Sa halagang <strong>P49.00</strong> pwede ka nang magsimula ng iyong journey bilang isang
+                        influencer at creator.</p>
 
-                    <p><strong>LIMITED EARLY ACCESS OFFER</strong><br>
-                        Kaya huwag magpahuli — <strong><a href="https://vibrant-club.com/register" target="_blank">SIGN
-                                UP NA sa Vibrant Club Platform today! </a></strong>
+                    <p><strong>Kaya ano pang hinihintay mo? Tara na at simulan ang iyong journey!</strong></p>
+
+                    <p>
+                        <strong><a href="https://vibrant-club.com/register" target="_blank">
+                                SIGN UP NA sa Vibrant Club Platform today!
+                            </a></strong>
                     </p>
 
                     <p class="mt-3 mb-0">
                         <small>#VibrantClubPH #XDeal #InfluencerPH #CollabPH #DigitalCreatorCommunity</small>
                     </p>
                 </div>
+
             </div>
         </div>
 
