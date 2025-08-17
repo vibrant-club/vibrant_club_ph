@@ -31,12 +31,27 @@
                                 facebook.com/groups/vibrant.club.ph
                             </a>
                         </li>
+                        <br>
+                        <li>📱 Join our Viber Community:
+                            <a href="https://invite.viber.com/?g=pPD0ABfM2VRqzNArqa7xK2v7zdOcS4nR" target="_blank"
+                                class="fw-bold text-decoration-none text-warning">
+                                invite.viber.com
+                            </a>
+                        </li>
+                        <br>
+                        <li>🎮 Join our Discord Server:
+                            <a href="https://discord.gg/BmQHq2VA" target="_blank"
+                                class="fw-bold text-decoration-none text-info">
+                                discord.gg/BmQHq2VA
+                            </a>
+                        </li>
                     </ul>
+
 
                     <p class="mt-3 text-muted mb-0">
                         Your support helps us reach more amazing people like you! ✨
                     </p>
-                </div> 
+                </div>
             </div>
             <div class="modal-footer border-0 px-4 pb-4 justify-content-center">
                 <button type="button" class="btn btn-vibrant-outline rounded-pill px-4" data-bs-dismiss="modal">
