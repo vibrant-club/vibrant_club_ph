@@ -143,7 +143,7 @@ class RegisterController extends Controller
             'middlename' => $data['middlename'] ?? null,
             'lastname' => $data['lastname'],
             'email' => $data['email'],
-            'role' => '12', //2
+            'role' => '2', 
             'contact_number' => $data['contact_number'],
             'password' => Hash::make($data['password']),
             'registration_code' => $code->registration_code_simple,
