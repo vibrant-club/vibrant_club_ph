@@ -130,10 +130,14 @@
                             <i class="fas fa-share-alt me-2"></i> Share
                         </button>
                     @endif
-
                 </div>
-
-
+                <hr>
+                <div class="text-start">
+                    <span class="fs-6">
+                        Subscription Ends:
+                        <i>{{ \Carbon\Carbon::parse(Auth::user()->expired_at)->format('F j, Y') }}</i>
+                    </span>
+                </div>
 
             </div>
 

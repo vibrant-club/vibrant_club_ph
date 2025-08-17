@@ -90,27 +90,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::7CJNrwVRIZHAAHQQ',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/daily-quote' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'generated::cXti9SHhS36o8QZp',
+            '_route' => 'generated::BdDbYt4fDMwdoGdu',
           ),
           1 => NULL,
           2 => 
@@ -130,7 +110,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::WnfbVVDACwsEnj3m',
+            '_route' => 'generated::WujwDzMF5tPtnQeg',
           ),
           1 => NULL,
           2 => 
@@ -167,7 +147,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::E0WGtFTXAGsXCsCO',
+            '_route' => 'generated::G1yDzg7rHqAWMKzf',
           ),
           1 => NULL,
           2 => 
@@ -222,7 +202,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::LgaZL5aEaBzir7cW',
+            '_route' => 'generated::9xPFhQVsnYJ4iVEX',
           ),
           1 => NULL,
           2 => 
@@ -313,12 +293,32 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::gePEz8QHMMAKe6SZ',
+            '_route' => 'generated::DuaaxiNksIxzKMz1',
           ),
           1 => NULL,
           2 => 
           array (
             'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/daily-quote' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'generated::o6iGT3hPuPMAhHOo',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
           ),
           3 => NULL,
           4 => false,
@@ -740,7 +740,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::7CJNrwVRIZHAAHQQ' => 
+    'generated::BdDbYt4fDMwdoGdu' => 
     array (
       'methods' => 
       array (
@@ -768,8 +768,8 @@ app('router')->setCompiledRoutes(
                     return response(\\Illuminate\\Support\\Facades\\View::file(\'C:\\\\Users\\\\cespena\\\\Videos\\\\vibrant_club_ph\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Configuration\'.\'/../resources/health-up.blade.php\', [
                         \'exception\' => $exception,
                     ]), status: $exception ? 500 : 200);
-                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"000000000000034e0000000000000000";}}',
-        'as' => 'generated::7CJNrwVRIZHAAHQQ',
+                }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000003500000000000000000";}}',
+        'as' => 'generated::BdDbYt4fDMwdoGdu',
       ),
       'fallback' => false,
       'defaults' => 
@@ -785,46 +785,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::cXti9SHhS36o8QZp' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'daily-quote',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:153:"function () {
-    $response = \\Illuminate\\Support\\Facades\\Http::get(\'https://zenquotes.io/api/today\');
-    return \\response()->json($response->json());
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000003500000000000000000";}}',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'generated::cXti9SHhS36o8QZp',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'generated::WnfbVVDACwsEnj3m' => 
+    'generated::WujwDzMF5tPtnQeg' => 
     array (
       'methods' => 
       array (
@@ -846,7 +807,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::WnfbVVDACwsEnj3m',
+        'as' => 'generated::WujwDzMF5tPtnQeg',
       ),
       'fallback' => false,
       'defaults' => 
@@ -899,7 +860,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::E0WGtFTXAGsXCsCO' => 
+    'generated::G1yDzg7rHqAWMKzf' => 
     array (
       'methods' => 
       array (
@@ -919,7 +880,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::E0WGtFTXAGsXCsCO',
+        'as' => 'generated::G1yDzg7rHqAWMKzf',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1008,7 +969,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::LgaZL5aEaBzir7cW' => 
+    'generated::9xPFhQVsnYJ4iVEX' => 
     array (
       'methods' => 
       array (
@@ -1028,7 +989,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::LgaZL5aEaBzir7cW',
+        'as' => 'generated::9xPFhQVsnYJ4iVEX',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1227,7 +1188,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::gePEz8QHMMAKe6SZ' => 
+    'generated::DuaaxiNksIxzKMz1' => 
     array (
       'methods' => 
       array (
@@ -1247,7 +1208,47 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::gePEz8QHMMAKe6SZ',
+        'as' => 'generated::DuaaxiNksIxzKMz1',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::o6iGT3hPuPMAhHOo' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'daily-quote',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:165:"function () {
+        $response = \\Illuminate\\Support\\Facades\\Http::get(\'https://zenquotes.io/api/today\');
+        return \\response()->json($response->json());
+    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000035b0000000000000000";}}',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'generated::o6iGT3hPuPMAhHOo',
       ),
       'fallback' => false,
       'defaults' => 

@@ -107,7 +107,7 @@
 
                             {{-- Registration Code --}}
                             {{-- OLD CODE FOR INPUTTING REGISTRAION CODE --}}
-                            {{-- <div class="mb-4">
+                            <div class="mb-2">
                                 <label for="registration_code_simple" class="form-label">Registration Code</label>
                                 <input id="registration_code_simple" type="text"
                                     class="form-control rounded-pill @error('registration_code_simple') is-invalid @enderror"
@@ -115,9 +115,11 @@
                                 @error('registration_code_simple')
                                     <div class="invalid-feedback d-block">{{ $message }}</div>
                                 @enderror
-                            </div> --}}
+                            </div>
 
-                            <div class="mb-4">
+                            {{-- Registration Code --}}
+                            {{-- BEW FOR INPUTTING FREE-ACCESS --}}
+                            {{-- <div class="mb-4">
                                 <label for="registration_code_simple" class="form-label">Registration Code</label>
                                 <input id="registration_code_simple" type="text"
                                     class="form-control rounded-pill @error('registration_code_simple') is-invalid @enderror"
@@ -126,6 +128,17 @@
                                 @error('registration_code_simple')
                                     <div class="invalid-feedback d-block">{{ $message }}</div>
                                 @enderror
+                            </div> --}}
+
+
+                            {{-- Messenger help link --}}
+                            <div class="mb-4 medium fst-italic">
+                                <span>If you don’t have a registration code, message us on
+                                    <a href="https://www.messenger.com/t/vibrant.club.ph" target="_blank"
+                                        style="color:#ff0084; font-weight:bold;">
+                                        Messenger
+                                    </a>
+                                </span>
                             </div>
 
                             {{-- Submit --}}

@@ -39,6 +39,7 @@ class User extends Authenticatable
         'expired_at',
         'role',
         'contact_number',
+        'last_login',
     ];
 
     /**

@@ -129,6 +129,7 @@
     @auth
         @include('modals.daily_announcement')
         @include('modals.daily_favor')
+        @include('modals.expiration_pop_up')
     @endauth
 
     <div id="app">
