@@ -141,6 +141,15 @@
                                 </span>
                             </div>
 
+                            {{-- Data Privacy --}}
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="privacyCheck" required>
+                                <label class="form-check-label" for="privacyCheck">
+                                    I agree to the <a href="#" data-bs-toggle="modal"
+                                        data-bs-target="#privacyModal">Data Privacy Policy</a>
+                                </label>
+                            </div>
+
                             {{-- Submit --}}
                             <div class="d-grid mb-4">
                                 <button type="submit" class="btn rounded-pill py-2 fs-5 text-white"
@@ -153,6 +162,35 @@
 
                         </form>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Data Privacy Modal --}}
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow-lg">
+                <div class="modal-header" style="background-color:#ff0084; color:white;">
+                    <h5 class="modal-title fw-bold" id="privacyModalLabel">Data Privacy Policy</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p>We value your privacy and are committed to protecting your personal information. By registering with
+                        Vibrant Club PH, you consent to the collection and use of your information solely for the purposes
+                        of account creation, campaign opportunities, and community engagement.</p>
+
+                    <p>Your information will not be shared with third parties without your consent, except when required by
+                        law. For more details on how we protect your data, please review our full privacy practices on our
+                        website.</p>
+
+                    <p class="fw-semibold">By proceeding, you acknowledge that you have read and agree to our Data Privacy
+                        Policy.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary rounded-pill px-4"
+                        data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
