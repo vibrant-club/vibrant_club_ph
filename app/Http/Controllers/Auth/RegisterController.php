@@ -76,7 +76,7 @@ class RegisterController extends Controller
         ]);
     }
 
-    
+
 
     // THIS IS THE NEW THAT IS GIVING FREE ACCESS -------------------------------------------------------------
     // protected function validator(array $data)
@@ -129,22 +129,30 @@ class RegisterController extends Controller
             ->where('id', $code->id)
             ->update(['status' => 1]);
 
-        // Set expiration 1 month from now
-        $expiredAt = Carbon::now()->addMonth();
+        // Determine expiration based on sub_plan
+        switch ($code->sub_plan) {
+            case 1:       // 1 month plan
+                $expiredAt = Carbon::now()->addMonth();
+                break;
+            case 6:       // 6 months plan
+                $expiredAt = Carbon::now()->addMonths(6);
+                break;
+            case 12:      // 1 year plan
+                $expiredAt = Carbon::now()->addYear();
+                break;
+            default:      // fallback if sub_plan is missing
+                $expiredAt = Carbon::now()->addMonth();
+                break;
+        }
 
-         // Set expiration 6 months from now
-        // $expiredAt = Carbon::now()->addMonth(6);
 
-        // Set expiration 1 year from now
-        // $expiredAt = Carbon::now()->addYear();
-
-
+        // Create the user
         return User::create([
             'firstname' => $data['firstname'],
             'middlename' => $data['middlename'] ?? null,
             'lastname' => $data['lastname'],
             'email' => $data['email'],
-            'role' => '2', 
+            'role' => '2',
             'contact_number' => $data['contact_number'],
             'password' => Hash::make($data['password']),
             'registration_code' => $code->registration_code_simple,
