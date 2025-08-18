@@ -129,14 +129,15 @@ class RegisterController extends Controller
             ->where('id', $code->id)
             ->update(['status' => 1]);
 
+        // Set expiration 1 month from now
+        $expiredAt = Carbon::now()->addMonth();
+
+         // Set expiration 6 months from now
+        // $expiredAt = Carbon::now()->addMonth(6);
+
         // Set expiration 1 year from now
         // $expiredAt = Carbon::now()->addYear();
 
-        // Set expiration 1 month from now
-        // $expiredAt = Carbon::now()->addMonth();
-
-        // Set expiration 30 days from now
-        $expiredAt = Carbon::now()->addDays(60);
 
         return User::create([
             'firstname' => $data['firstname'],
