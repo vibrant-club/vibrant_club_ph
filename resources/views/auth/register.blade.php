@@ -8,9 +8,9 @@
 
                     <div class="card-header text-white text-center rounded-top-4 py-3 fs-2 fw-semibold"
                         style="background-color: #ff0084;">
-                        Join our influencer network today!
+                        Welcome Vibrants 🌟
                         <div class="fs-6 fw-normal mt-1" style="line-height: 1.2;">
-                            Collaborate and grow your network with exclusive campaign opportunities and community perks.
+                            Rise, connect and succeed with exclusive brand campaigns, x-deals, and collaboration opportunities with us
                         </div>
                     </div>
 
