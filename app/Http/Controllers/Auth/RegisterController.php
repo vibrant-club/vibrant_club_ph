@@ -123,7 +123,7 @@ class RegisterController extends Controller
         $code = DB::table('registration_code_tbl')
             ->where('registration_code_simple', $data['registration_code_simple'])
             ->first();
-
+            
         // Mark code as used
         DB::table('registration_code_tbl')
             ->where('id', $code->id)
@@ -155,6 +155,8 @@ class RegisterController extends Controller
             'role' => '2',
             'contact_number' => $data['contact_number'],
             'password' => Hash::make($data['password']),
+            'referral_code' => $data['referral_code'] ?? null,
+            'referral_code_sub_plan' => $code->sub_plan,
             'registration_code' => $code->registration_code_simple,
             'expired_at' => $expiredAt,
         ]);

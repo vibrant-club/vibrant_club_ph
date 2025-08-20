@@ -6,7 +6,7 @@
             @csrf
             @method('PUT')
 
-            <div class="text-center fs-5 rounded shadow-sm p-3">
+            <div class="text-center fs-5 rounded shadow-sm p-3 mb-2" style="border: 2px solid #ff0084;">
                 <div class="position-relative mx-auto mb-2" style="width: 200px; height: 200px;">
                     <img id="profilePreview"
                         src="{{ Auth::user()->profile_image
@@ -42,14 +42,12 @@
                     <input name="tags" id="tag-input" class="form-control" placeholder="Select or type tags..."
                         value="{{ old('tags', implode(',', Auth::user()->tags->pluck('name')->toArray())) }}">
                 </div>
-
-
             </div>
 
 
 
 
-            <div class="text-start p-3 fs-5 rounded shadow-sm">
+            <div class="text-start p-3 fs-5 rounded shadow-sm mb-2" style="border: 2px solid #ff0084;">
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text bg-white border-end-0">
@@ -131,15 +129,44 @@
                         </button>
                     @endif
                 </div>
-                <hr>
+            </div>
+
+
+
+
+            <div class="text-start p-3 fs-5 rounded shadow-sm mb-2" style="border: 2px solid #ff0084;">
                 <div class="text-start">
                     <span class="fs-6">
                         Subscription Ends:
-                        <i>{{ \Carbon\Carbon::parse(Auth::user()->expired_at)->format('F j, Y') }}</i>
+                        <strong>{{ \Carbon\Carbon::parse(Auth::user()->expired_at)->format('F j, Y') }}</strong>
                     </span>
                 </div>
-
             </div>
+
+            @auth
+                @if (Auth::user()->is_referrer)
+                    <div class="text-start p-3 fs-5 rounded shadow-sm" style="border: 2px solid #ff0084;">
+                        <div class="text-start mt-1">
+                            <span class="fs-6">
+                                <button type="button" onclick="copyReferralLink(this)"
+                                    class="btn btn-sm btn-outline-primary">
+                                    Copy
+                                </button>
+                                <input type="text" id="referralLink" class="form-control d-inline-block w-75"
+                                    value="{{ url('/register') }}?ref={{ Auth::user()->registration_code }}" readonly>
+                            </span>
+                        </div>
+
+                        <div class="text-start mt-1">
+                            <span class="fs-6">
+                                Total Referrals:
+                                <strong>{{ \App\Models\User::where('referral_code', Auth::user()->registration_code)->count() }}</strong>
+                            </span>
+                        </div>
+                    </div>
+                @endif
+            @endauth
+
 
 
 
@@ -235,6 +262,17 @@
                 // Preview the image
                 document.getElementById('profilePreview').src = URL.createObjectURL(file);
             }
+        }
+
+        function copyReferralLink(button) {
+            let copyText = document.getElementById("referralLink");
+            navigator.clipboard.writeText(copyText.value)
+                .then(() => {
+                    // Change button text to give feedback
+                    button.textContent = "Copied!";
+                    setTimeout(() => button.textContent = "Copy", 2000);
+                })
+                .catch(err => alert("Failed to copy link: " + err));
         }
     </script>
 @endsection

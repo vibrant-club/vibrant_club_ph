@@ -40,6 +40,10 @@ class User extends Authenticatable
         'role',
         'contact_number',
         'last_login',
+        'referral_code',
+        'is_referrer',
+        'referral_code_sub_plan',
+        
     ];
 
     /**
@@ -69,7 +73,7 @@ class User extends Authenticatable
     {
         // $this->notify(new \App\Notifications\ResetPasswordNotificationCustom($token));
         // $this->notify(new ResetPasswordNotificationCustom($token));
-         $this->notify(new ResetPasswordSendGrid($token));
+        $this->notify(new ResetPasswordSendGrid($token));
         //  $this->notify(new ResetPasswordBrevo($token));
         // $this->notify(new ResetPasswordResend($token));
 

@@ -32,114 +32,157 @@
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
 
-                            {{-- First Name --}}
-                            <div class="mb-2">
-                                <label for="firstname" class="form-label">{{ __('First Name') }}</label>
-                                <input id="firstname" type="text"
-                                    class="form-control rounded-pill @error('firstname') is-invalid @enderror"
-                                    name="firstname" value="{{ old('firstname') }}" required>
-                                @error('firstname')
-                                    <div class="invalid-feedback d-block">{{ $message }}</div>
-                                @enderror
+                            {{-- BASIC INFORMATION BOX --}}
+                            <div class="p-3 mb-4 rounded-4 shadow-sm" style="border: 2px solid #ff0084;">
+
+                                <div class="mb-3 text-center">
+                                    <h5 class="fw-bold mb-0" style="color:#ff0084;">BASIC INFORMATION</h5>
+                                </div>
+
+
+
+                                {{-- First Name --}}
+                                <div class="mb-2">
+                                    <label for="firstname" class="form-label">First Name</label>
+                                    <input id="firstname" type="text"
+                                        class="form-control rounded-pill @error('firstname') is-invalid @enderror"
+                                        name="firstname" value="{{ old('firstname') }}" required>
+                                    @error('firstname')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                {{-- Middle Name --}}
+                                <div class="mb-2">
+                                    <label for="middlename" class="form-label">Middle Name</label>
+                                    <input id="middlename" type="text"
+                                        class="form-control rounded-pill @error('middlename') is-invalid @enderror"
+                                        name="middlename" value="{{ old('middlename') }}">
+                                    @error('middlename')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                {{-- Last Name --}}
+                                <div class="mb-2">
+                                    <label for="lastname" class="form-label">Last Name</label>
+                                    <input id="lastname" type="text"
+                                        class="form-control rounded-pill @error('lastname') is-invalid @enderror"
+                                        name="lastname" value="{{ old('lastname') }}" required>
+                                    @error('lastname')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                {{-- Contact Number --}}
+                                <div class="mb-2">
+                                    <label for="contact_number" class="form-label">Contact Number</label>
+                                    <input id="contact_number" type="text"
+                                        class="form-control rounded-pill @error('contact_number') is-invalid @enderror"
+                                        name="contact_number" value="{{ old('contact_number') }}" required>
+                                    @error('contact_number')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                    @enderror
+                                </div>
                             </div>
 
-                            {{-- Middle Name --}}
-                            <div class="mb-2">
-                                <label for="middlename" class="form-label">{{ __('Middle Name') }}</label>
-                                <input id="middlename" type="text"
-                                    class="form-control rounded-pill @error('middlename') is-invalid @enderror"
-                                    name="middlename" value="{{ old('middlename') }}">
-                                @error('middlename')
-                                    <div class="invalid-feedback d-block">{{ $message }}</div>
-                                @enderror
+
+                            {{-- LOGIN CREDENTIALS BOX --}}
+                            <div class="p-3 mb-4 rounded-4 shadow-sm" style="border: 2px solid #ff0084;">
+
+                                <div class="mb-3 text-center">
+                                    <h5 class="fw-bold mb-0" style="color:#ff0084;">LOGIN CREDENTIALS</h5>
+                                </div>
+
+                                {{-- Email --}}
+                                <div class="mb-2">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input id="email" type="email"
+                                        class="form-control rounded-pill @error('email') is-invalid @enderror"
+                                        name="email" value="{{ old('email') }}" required autocomplete="email">
+                                    @error('email')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                {{-- Password --}}
+                                <div class="mb-2">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input id="password" type="password"
+                                        class="form-control rounded-pill @error('password') is-invalid @enderror"
+                                        name="password" required autocomplete="new-password">
+                                    @error('password')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                {{-- Confirm Password --}}
+                                <div class="mb-2">
+                                    <label for="password-confirm" class="form-label">Confirm Password</label>
+                                    <input id="password-confirm" type="password" class="form-control rounded-pill"
+                                        name="password_confirmation" required autocomplete="new-password">
+                                </div>
                             </div>
 
-                            {{-- Last Name --}}
-                            <div class="mb-2">
-                                <label for="lastname" class="form-label">{{ __('Last Name') }}</label>
-                                <input id="lastname" type="text"
-                                    class="form-control rounded-pill @error('lastname') is-invalid @enderror"
-                                    name="lastname" value="{{ old('lastname') }}" required>
-                                @error('lastname')
-                                    <div class="invalid-feedback d-block">{{ $message }}</div>
-                                @enderror
-                            </div>
 
-                            {{-- Email --}}
-                            <div class="mb-2">
-                                <label for="email" class="form-label">{{ __('Email Address') }}</label>
-                                <input id="email" type="email"
-                                    class="form-control rounded-pill @error('email') is-invalid @enderror" name="email"
-                                    value="{{ old('email') }}" required autocomplete="email">
-                                @error('email')
-                                    <div class="invalid-feedback d-block">{{ $message }}</div>
-                                @enderror
-                            </div>
+                            {{-- REGISTRATION DETAILS BOX --}}
+                            <div class="p-3 mb-4 rounded-4 shadow-sm" style="border: 2px solid #ff0084;">
 
-                            {{-- Contact Number --}}
-                            <div class="mb-2">
-                                <label for="contact_number" class="form-label">{{ __('Contact Number') }}</label>
-                                <input id="contact_number" type="text"
-                                    class="form-control rounded-pill @error('contact_number') is-invalid @enderror"
-                                    name="contact_number" value="{{ old('contact_number') }}" required>
-                                @error('contact_number')
-                                    <div class="invalid-feedback d-block">{{ $message }}</div>
-                                @enderror
-                            </div>
+                                <div class="mb-3 text-center">
+                                    <h5 class="fw-bold mb-0" style="color:#ff0084;">REGISTRATION DETAILS</h5>
+                                </div>
 
-                            {{-- Password --}}
-                            <div class="mb-2">
-                                <label for="password" class="form-label">{{ __('Password') }}</label>
-                                <input id="password" type="password"
-                                    class="form-control rounded-pill @error('password') is-invalid @enderror"
-                                    name="password" required autocomplete="new-password">
-                                @error('password')
-                                    <div class="invalid-feedback d-block">{{ $message }}</div>
-                                @enderror
-                            </div>
-
-                            {{-- Confirm Password --}}
-                            <div class="mb-2">
-                                <label for="password-confirm" class="form-label">{{ __('Confirm Password') }}</label>
-                                <input id="password-confirm" type="password" class="form-control rounded-pill"
-                                    name="password_confirmation" required autocomplete="new-password">
-                            </div>
-
-                            {{-- Registration Code --}}
-                            {{-- OLD CODE FOR INPUTTING REGISTRAION CODE --}}
-                            <div class="mb-2">
-                                <label for="registration_code_simple" class="form-label">Registration Code</label>
-                                <input id="registration_code_simple" type="text"
-                                    class="form-control rounded-pill @error('registration_code_simple') is-invalid @enderror"
-                                    name="registration_code_simple" value="{{ old('registration_code_simple') }}" required>
-                                @error('registration_code_simple')
-                                    <div class="invalid-feedback d-block">{{ $message }}</div>
-                                @enderror
-                            </div>
-
-                            {{-- Registration Code --}}
-                            {{-- BEW FOR INPUTTING FREE-ACCESS --}}
-                            {{-- <div class="mb-4">
-                                <label for="registration_code_simple" class="form-label">Registration Code</label>
-                                <input id="registration_code_simple" type="text"
-                                    class="form-control rounded-pill @error('registration_code_simple') is-invalid @enderror"
-                                    name="registration_code_display" value="FREE-ACCESS" disabled>
-                                <input type="hidden" name="registration_code_simple" value="FREE-ACCESS">
-                                @error('registration_code_simple')
-                                    <div class="invalid-feedback d-block">{{ $message }}</div>
-                                @enderror
-                            </div> --}}
+                                {{-- REFERRAL CODE --}}
+                                <div class="mb-2">
+                                    <label for="referral_code" class="form-label">Referral Code</label>
+                                    <div class="input-group">
+                                        <input id="referral_code" type="text" class="form-control rounded-pill"
+                                            name="referral_code" value="{{ request('ref') }}" required>
+                                        <div class="input-group-text bg-white border-0">
+                                            <input type="checkbox" id="referral_na" class="form-check-input ms-2">
+                                            <label for="referral_na" class="ms-1 mb-0">N/A</label>
+                                        </div>
+                                    </div>
+                                </div>
 
 
-                            {{-- Messenger help link --}}
-                            <div class="mb-4 medium fst-italic">
-                                <span>If you don’t have a registration code, message us on
+                                {{-- Registration Code --}}
+                                {{-- OLD CODE FOR INPUTTING REGISTRATION CODE --}}
+                                <div class="mb-4">
+                                    <label for="registration_code_simple" class="form-label">Registration Code</label>
+                                    <input id="registration_code_simple" type="text"
+                                        class="form-control rounded-pill @error('registration_code_simple') is-invalid @enderror"
+                                        name="registration_code_simple" value="{{ old('registration_code_simple') }}"
+                                        required>
+                                    @error('registration_code_simple')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                {{-- Registration Code --}}
+                                {{-- NEW CODE FOR INPUTTING FREE-ACCESS --}}
+                                {{-- 
+                                <div class="mb-4">
+                                    <label for="registration_code_simple" class="form-label">Registration Code</label>
+                                    <input id="registration_code_simple" type="text"
+                                        class="form-control rounded-pill @error('registration_code_simple') is-invalid @enderror"
+                                        name="registration_code_display" value="FREE-ACCESS" disabled>
+                                    <input type="hidden" name="registration_code_simple" value="FREE-ACCESS">
+                                    @error('registration_code_simple')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                --}}
+
+                                {{-- Messenger Help --}}
+                                <div class="mb-3 fst-italic small">
+                                    If you don’t have a registration code, message us on
                                     <a href="https://www.messenger.com/t/vibrant.club.ph" target="_blank"
-                                        style="color:#ff0084; font-weight:bold;">
-                                        Messenger
-                                    </a>
-                                </span>
+                                        style="color:#ff0084; font-weight:bold;">Messenger</a>
+                                </div>
+
                             </div>
+
 
                             {{-- Data Privacy --}}
                             <div class="form-check mb-3">
@@ -195,4 +238,24 @@
             </div>
         </div>
     </div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const referralInput = document.getElementById("referral_code");
+            const referralCheckbox = document.getElementById("referral_na");
+
+            referralCheckbox.addEventListener("change", function() {
+                if (this.checked) {
+                    referralInput.value = "";
+                    referralInput.removeAttribute("required");
+                    referralInput.setAttribute("disabled", "disabled");
+                } else {
+                    referralInput.setAttribute("required", "required");
+                    referralInput.removeAttribute("disabled");
+                }
+            });
+        });
+    </script>
 @endsection
