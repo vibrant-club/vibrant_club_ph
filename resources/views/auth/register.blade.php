@@ -185,7 +185,7 @@
 
 
                             {{-- Data Privacy --}}
-                            <div class="form-check mb-3">
+                            <div class="form-check mb-3 fst-italic small">
                                 <input class="form-check-input" type="checkbox" id="privacyCheck" required>
                                 <label class="form-check-label" for="privacyCheck">
                                     I agree to the <a href="#" data-bs-toggle="modal"
