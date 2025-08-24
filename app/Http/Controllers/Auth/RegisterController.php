@@ -152,13 +152,14 @@ class RegisterController extends Controller
             'middlename' => $data['middlename'] ?? null,
             'lastname' => $data['lastname'],
             'email' => $data['email'],
-            'role' => '2',
+            'role' => '12',
             'contact_number' => $data['contact_number'],
             'password' => Hash::make($data['password']),
             'referral_code' => $data['referral_code'] ?? null,
             'referral_code_sub_plan' => $code->sub_plan,
             'registration_code' => $code->registration_code_simple,
             'expired_at' => $expiredAt,
+            'is_referrer' => '1',
         ]);
     }
 
