@@ -123,7 +123,7 @@ class RegisterController extends Controller
         $code = DB::table('registration_code_tbl')
             ->where('registration_code_simple', $data['registration_code_simple'])
             ->first();
-            
+
         // Mark code as used
         DB::table('registration_code_tbl')
             ->where('id', $code->id)
@@ -131,6 +131,9 @@ class RegisterController extends Controller
 
         // Determine expiration based on sub_plan
         switch ($code->sub_plan) {
+            case 0:       // trial plan (1 day)
+                $expiredAt = Carbon::now()->addDay();
+                break;
             case 1:       // 1 month plan
                 $expiredAt = Carbon::now()->addMonth();
                 break;

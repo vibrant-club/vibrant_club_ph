@@ -24,6 +24,7 @@ class RegistrationCodeSeeder extends Seeder
                 'registration_code' => $uuid,
                 'registration_code_simple' => $simpleCode,
                 'status' => 0,
+                'sub_plan' => 0,
                 'date_of_registration' => now(),
             ];
         }
