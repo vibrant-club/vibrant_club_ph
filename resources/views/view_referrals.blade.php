@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container my-4">
+    <div class="container my-4 mb-2">
         <div class="card shadow-lg border-0">
             <div class="card-header text-white" style="background: linear-gradient(90deg, #ff0084, #ff4db8);">
                 <h4 class="mb-0 text-center">My Referrals</h4>
@@ -63,4 +63,17 @@
             </div>
         </div>
     </div>
+
+    <div class="container my-4 mb-2">
+        <div class="card shadow-lg border-0">
+            <div class="card-header text-white" style="background: linear-gradient(90deg, #ff0084, #ff4db8);">
+                <h4 class="mb-0 text-center">PAYOUT DETAILS</h4>
+            </div>
+
+            <div class="card-body" style="font-size: 11px">
+                ADD GCASH
+            </div>
+        </div>
+    </div>
+
 @endsection
