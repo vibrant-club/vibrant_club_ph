@@ -145,26 +145,27 @@
 
             @auth
                 @if (Auth::user()->is_referrer)
-                    <div class="text-start p-3 fs-5 rounded shadow-sm" style="border: 2px solid #ff0084;">
-                        <div class="text-start mt-1">
-                            <span class="fs-6">
-                                <button type="button" onclick="copyReferralLink(this)"
-                                    class="btn btn-sm btn-outline-primary">
-                                    Copy
-                                </button>
-                                <input type="text" id="referralLink" class="form-control d-inline-block w-75"
-                                    value="{{ url('/register') }}?ref={{ Auth::user()->registration_code }}" readonly>
-                            </span>
+                    <div class="text-start p-3 rounded shadow-sm" style="border: 2px solid #ff0084;">
+                        {{-- Copy Referral Link --}}
+                        <div class="d-flex align-items-center mb-2">
+                            <button type="button" onclick="copyReferralLink(this)"
+                                class="btn btn-outline-primary btn-sm me-2">
+                                Copy
+                            </button>
+                            <input type="text" id="referralLink" class="form-control form-control-sm"
+                                value="{{ url('/register') }}?ref={{ Auth::user()->registration_code }}" readonly>
                         </div>
 
-                        <div class="text-start mt-1">
-                            <a href="{{ route('view_referrals') }}" class="btn btn-sm btn-outline-primary">
+                        {{-- View Referrals --}}
+                        <div class="d-flex align-items-center">
+                            <a href="{{ route('view_referrals') }}" class="btn btn-outline-primary btn-sm me-2">
                                 View
                             </a>
-
-                            <span class="fs-6">
+                            <span class="small text-muted">
                                 Total Referrals:
-                                <strong>{{ \App\Models\User::where('referral_code', Auth::user()->registration_code)->count() }}</strong>
+                                <strong class="text-dark">
+                                    {{ \App\Models\User::where('referral_code', Auth::user()->registration_code)->count() }}
+                                </strong>
                             </span>
                         </div>
                     </div>
