@@ -60,7 +60,7 @@
                             </tbody>
                             <tfoot>
                                 <tr class="table-secondary">
-                                    <td colspan="3" class="fw-bold text-start">Total Commission:</td>
+                                    <td colspan="4" class="fw-bold text-start">Total Commission:</td>
                                     <td class="fw-bold text-primary">
                                         ₱{{ number_format($totalCommission, 2) }}
                                     </td>
