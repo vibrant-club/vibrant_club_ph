@@ -26,4 +26,19 @@ class ReferralController extends Controller
 
         return view('view_referrals', compact('referrals'));
     }
+
+    public function updateGcash(Request $request)
+    {
+        $request->validate([
+            'gcash_name'   => 'required|string|max:255',
+            'gcash_number' => 'required|string|max:20',
+        ]);
+
+        $user = $request->user();
+        $user->gcash_name = $request->gcash_name;
+        $user->gcash_number = $request->gcash_number;
+        $user->save();
+
+        return redirect()->back()->with('success', 'GCash details updated successfully!');
+    }
 }

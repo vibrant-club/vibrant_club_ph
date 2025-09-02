@@ -34,6 +34,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/my_pending_campaigns', [CampaignController::class, 'showMyPendingCampaigns'])->name('my_pending_campaigns');
 
     Route::get('/view_referrals', [ReferralController::class, 'showReferrals'])->name('view_referrals');
+    Route::put('/update-gcash', [ReferralController::class, 'updateGcash'])->name('update.gcash');
+    
 });
 
 

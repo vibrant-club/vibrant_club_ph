@@ -4,7 +4,7 @@
     <div class="container my-4 mb-2">
         <div class="card shadow-lg border-0">
             <div class="card-header text-white" style="background: linear-gradient(90deg, #ff0084, #ff4db8);">
-                <h4 class="mb-0 text-center">My Referrals</h4>
+                <h5 class="mb-0 text-center">MY REFERRALS</h5>
             </div>
 
             <div class="card-body" style="font-size: 11px">
@@ -67,13 +67,44 @@
     <div class="container my-4 mb-2">
         <div class="card shadow-lg border-0">
             <div class="card-header text-white" style="background: linear-gradient(90deg, #ff0084, #ff4db8);">
-                <h4 class="mb-0 text-center">PAYOUT DETAILS</h4>
+                <h5 class="mb-0 text-center">PAYOUT DETAILS</h5>
             </div>
 
             <div class="card-body" style="font-size: 11px">
-                ADD GCASH
+                <form action="{{ route('update.gcash') }}" method="POST">
+                    @csrf
+                    @method('PUT')
+
+                    <div class="mb-3">
+                        <label for="gcash_name" class="form-label fw-bold">GCash Name</label>
+                        <input type="text" name="gcash_name" id="gcash_name" class="form-control form-control-sm"
+                            value="{{ old('gcash_name', Auth::user()->gcash_name) }}"
+                            placeholder="Enter your GCash registered name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="gcash_number" class="form-label fw-bold">GCash Number</label>
+                        <input type="text" name="gcash_number" id="gcash_number" class="form-control form-control-sm"
+                            value="{{ old('gcash_number', Auth::user()->gcash_number) }}" placeholder="09XXXXXXXXX"
+                            required>
+                    </div>
+
+                    {{-- Payout Note --}}
+                    <div class="alert alert-warning small text-center mb-3" role="alert">
+                        ⚠️ Please be advised that payout is processed and deliver every <strong>last day of the month</strong>.
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-sm px-4 text-white"
+                            style="background-color:#ff0084; border-color:#ff0084;">
+                            Update
+                        </button>
+                    </div>
+
+                </form>
             </div>
         </div>
     </div>
+
 
 @endsection
