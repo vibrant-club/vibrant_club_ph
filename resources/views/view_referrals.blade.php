@@ -7,7 +7,7 @@
                 <h4 class="mb-0 text-center">My Referrals</h4>
             </div>
 
-            <div class="card-body" style="font-size: 10px">
+            <div class="card-body" style="font-size: 12px">
                 @if ($referrals->isEmpty())
                     <div class="alert alert-info text-center">
                         No referrals yet. Start sharing your referral link!
