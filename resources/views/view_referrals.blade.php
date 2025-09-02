@@ -19,6 +19,7 @@
                                 <tr>
                                     <th>No.</th>
                                     <th>Email</th>
+                                    <th>Username</th>
                                     <th>Sub. Plan</th>
                                     <th>Commission</th>
                                 </tr>
@@ -42,6 +43,7 @@
                                             @endphp
                                             {{ $maskedEmail }}
                                         </td>
+                                        <td>{{ $referral->vibrant_username }}</td>
                                         <td class="text-nowrap">
                                             @if ($referral->subscription_plan == 0)
                                                 Lifetime
