@@ -3,6 +3,7 @@
 use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReferralController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -17,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::middleware('auth')->group(function () {
-    
+
     Route::get('/daily-quote', function () {
         $response = Http::get('https://zenquotes.io/api/today');
         return response()->json($response->json());
@@ -31,6 +32,8 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/campaigns', [CampaignController::class, 'store'])->name('campaigns.store');
     Route::get('/my_pending_campaigns', [CampaignController::class, 'showMyPendingCampaigns'])->name('my_pending_campaigns');
+
+    Route::get('/view_referrals', [ReferralController::class, 'showReferrals'])->name('view_referrals');
 });
 
 
