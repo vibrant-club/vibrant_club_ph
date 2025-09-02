@@ -44,11 +44,16 @@
                                             {{ $maskedEmail }}
                                         </td>
                                         <td>
-                                            <a href="https://vibrant-club.com/username/{{ $referral->username }}"
-                                                target="_blank">
-                                                {{ $referral->username }}
-                                            </a>
+                                            @if ($referral->username)
+                                                <a href="https://vibrant-club.com/username/{{ $referral->username }}"
+                                                    target="_blank">
+                                                    {{ $referral->username }}
+                                                </a>
+                                            @else
+                                                <span class="text-muted">no_username</span>
+                                            @endif
                                         </td>
+
 
 
                                         <td class="text-nowrap">
