@@ -158,7 +158,10 @@
                         </div>
 
                         <div class="text-start mt-1">
-                            <button type="button"class="btn btn-sm btn-outline-primary">View</button>
+                            <a href="{{ route('view_referrals') }}" class="btn btn-sm btn-outline-primary">
+                                View
+                            </a>
+
                             <span class="fs-6">
                                 Total Referrals:
                                 <strong>{{ \App\Models\User::where('referral_code', Auth::user()->registration_code)->count() }}</strong>
