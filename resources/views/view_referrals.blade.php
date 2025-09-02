@@ -19,7 +19,7 @@
                                 <tr>
                                     <th>No.</th>
                                     <th>Email</th>
-                                    <th>Plan</th>
+                                    <th>Sub. Plan</th>
                                     <th>Commission</th>
                                 </tr>
                             </thead>
