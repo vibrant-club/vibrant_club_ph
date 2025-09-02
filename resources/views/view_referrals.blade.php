@@ -34,7 +34,13 @@
                                     @endphp
                                     <tr>
                                         <td>{{ $referral->seq }}</td>
-                                        <td>{{ $referral->email }}</td>
+                                        <td>
+                                            @php
+                                                $email = $referral->email;
+                                                $maskedEmail = preg_replace('/(^.).*(@.*)/', '$1***$2', $email);
+                                            @endphp
+                                            {{ $maskedEmail }}
+                                        </td>
                                         <td class="text-nowrap">
                                             @if ($referral->subscription_plan == 0)
                                                 Lifetime
@@ -91,7 +97,8 @@
 
                     {{-- Payout Note --}}
                     <div class="alert alert-warning small text-center mb-3" role="alert">
-                        ⚠️ Please be advised that payout is processed and deliver every <strong>last day of the month</strong>.
+                        ⚠️ Please be advised that payout is processed and deliver every <strong>last day of the
+                            month</strong>.
                     </div>
 
                     <div class="text-center">
