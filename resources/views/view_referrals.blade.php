@@ -35,7 +35,7 @@
                                     <tr>
                                         <td>{{ $referral->seq }}</td>
                                         <td>{{ $referral->email }}</td>
-                                        <td>
+                                        <td class="text-nowrap">
                                             @if ($referral->subscription_plan == 0)
                                                 Lifetime
                                             @else
