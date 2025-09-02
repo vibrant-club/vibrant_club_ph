@@ -16,6 +16,7 @@ class ReferralController extends Controller
         $referrals = DB::table('users')
             ->selectRaw('
                 ROW_NUMBER() OVER (ORDER BY id DESC) AS seq,
+                vibrant_username AS username,
                 email,
                 referral_code_sub_plan AS `subscription_plan`,
                 (referral_code_sub_plan * 49 / 2) AS `commission`

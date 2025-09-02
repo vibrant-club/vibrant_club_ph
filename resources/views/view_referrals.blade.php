@@ -43,7 +43,7 @@
                                             @endphp
                                             {{ $maskedEmail }}
                                         </td>
-                                        <td>{{ $referral->vibrant_username }}</td>
+                                        <td>{{ $referral->username }}</td>
                                         <td class="text-nowrap">
                                             @if ($referral->subscription_plan == 0)
                                                 Lifetime
