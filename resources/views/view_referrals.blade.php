@@ -33,7 +33,7 @@
                                     @php
                                         $totalCommission += $referral->commission;
                                     @endphp
-                                    
+
                                     <tr>
                                         <td>{{ $referral->seq }}</td>
                                         <td>
@@ -43,7 +43,13 @@
                                             @endphp
                                             {{ $maskedEmail }}
                                         </td>
-                                        <td>{{ $referral->username }}</td>
+                                        <td>
+                                            <a href="https://vibrant-club.com/username/{{ $referral->username }}"
+                                                target="_blank" class="text-decoration-none fw-bold" style="color:#ff0084;">
+                                                {{ $referral->username }}
+                                            </a>
+                                        </td>
+
                                         <td class="text-nowrap">
                                             @if ($referral->subscription_plan == 0)
                                                 Lifetime
