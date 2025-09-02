@@ -10,7 +10,8 @@
                         style="background-color: #ff0084;">
                         Welcome Vibrants 🌟
                         <div class="fs-6 fw-normal mt-1" style="line-height: 1.2;">
-                            Rise, connect and succeed with exclusive brand campaigns, x-deals, and collaboration opportunities with us
+                            Rise, connect and succeed with exclusive brand campaigns, x-deals, and collaboration
+                            opportunities with us
                         </div>
                     </div>
 
@@ -201,6 +202,16 @@
                                     onmouseout="this.style.backgroundColor='#ff0084';">
                                     {{ __('Register') }}
                                 </button>
+                            </div>
+
+                            {{-- Back to Login --}}
+                            <div class="d-grid mb-4">
+                                <a href="{{ route('login') }}" class="btn rounded-pill py-2 fs-5 text-white text-center"
+                                    style="background-color: #ff0084; border: none;"
+                                    onmouseover="this.style.backgroundColor='#e60076';"
+                                    onmouseout="this.style.backgroundColor='#ff0084';">
+                                    ← Back to Login
+                                </a>
                             </div>
 
                         </form>
