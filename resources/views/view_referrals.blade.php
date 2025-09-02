@@ -50,7 +50,7 @@
                                                     {{ $referral->username }}
                                                 </a>
                                             @else
-                                                <span class="text-muted">no_username</span>
+                                                <span class="">no_username</span>
                                             @endif
                                         </td>
 
