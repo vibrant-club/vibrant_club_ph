@@ -32,25 +32,16 @@
                                     @php
                                         $totalCommission += $referral->commission;
                                     @endphp
-                                    @php
-                                        function maskEmail($email)
-                                        {
-                                            [$local, $domain] = explode('@', $email);
-
-                                            if (strlen($local) > 2) {
-                                                $middle = substr($local, 1, -1);
-                                                $scrambled = preg_replace('/./', '*', $middle);
-                                                $localMasked = $local[0] . $scrambled . $local[-1];
-                                            } else {
-                                                $localMasked = substr($local, 0, 1) . '*';
-                                            }
-
-                                            return $localMasked . '@' . $domain;
-                                        }
-                                    @endphp
+                                    
                                     <tr>
                                         <td>{{ $referral->seq }}</td>
-                                        <td>{{ maskEmail($referral->email) }}</td>
+                                        <td>
+                                            @php
+                                                $email = $referral->email;
+                                                $maskedEmail = preg_replace('/(^.).*(@.*)/', '$1***$2', $email);
+                                            @endphp
+                                            {{ $maskedEmail }}
+                                        </td>
                                         <td class="text-nowrap">
                                             @if ($referral->subscription_plan == 0)
                                                 Lifetime
