@@ -19,16 +19,19 @@ class ReferralController extends Controller
                         vibrant_username AS username,
                         email,
                         referral_code_sub_plan AS `subscription_plan`,
-                        CASE 
-                            WHEN referral_code_sub_plan = 1 THEN 49 / 2
-                            WHEN referral_code_sub_plan = 6 THEN 41.5 / 2
-                            WHEN referral_code_sub_plan = 12 THEN 33.25 / 2
-                            ELSE 0
-                        END AS `commission`
+                        ROUND(
+                            CASE 
+                                WHEN referral_code_sub_plan = 1 THEN 1 * 49 / 2
+                                WHEN referral_code_sub_plan = 6 THEN 6 * 41.5 / 2
+                                WHEN referral_code_sub_plan = 12 THEN 12 * 33.25 / 2
+                                ELSE 0
+                            END, 2
+                        ) AS `commission`
                     ')
             ->where('referral_code', $user->registration_code)
             ->orderByDesc('id')
             ->get();
+
 
 
         return view('view_referrals', compact('referrals'));
