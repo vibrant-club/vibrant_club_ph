@@ -15,15 +15,21 @@ class ReferralController extends Controller
         // Fetch referrals based on the logged-in user's referral_code
         $referrals = DB::table('users')
             ->selectRaw('
-                ROW_NUMBER() OVER (ORDER BY id DESC) AS seq,
-                vibrant_username AS username,
-                email,
-                referral_code_sub_plan AS `subscription_plan`,
-                (referral_code_sub_plan * 49 / 2) AS `commission`
-            ')
+                        ROW_NUMBER() OVER (ORDER BY id DESC) AS seq,
+                        vibrant_username AS username,
+                        email,
+                        referral_code_sub_plan AS `subscription_plan`,
+                        CASE 
+                            WHEN referral_code_sub_plan = 1 THEN 49 / 2
+                            WHEN referral_code_sub_plan = 2 THEN 41.5 / 2
+                            WHEN referral_code_sub_plan = 3 THEN 33.25 / 2
+                            ELSE 0
+                        END AS `commission`
+                    ')
             ->where('referral_code', $user->registration_code)
             ->orderByDesc('id')
             ->get();
+
 
         return view('view_referrals', compact('referrals'));
     }
